@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:mypages="clr-namespace:TestCongres"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TestCongres.MainPage">
+
+    <TabbedPage.Children>
+        <mypages:Page1 Title="Plan de cours"></mypages:Page1>
+        <mypages:Page2 Title="Contacts"></mypages:Page2>
+    </TabbedPage.Children>
+
+    <ContentPage Title="Accueil">
+        <StackLayout>
+            <!-- Place new controls here -->
+            <Label Text="Page d'accueil des congressistes" 
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+    
+
+    <ContentPage Title="Paramètres">
+        <StackLayout>
+            <!-- Place new controls here -->
+            <Label Text="Page des paramètres" 
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+
+
+</TabbedPage>
