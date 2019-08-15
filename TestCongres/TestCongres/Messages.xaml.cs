@@ -10,11 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace TestCongres
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page3 : ContentPage
+    public partial class Messages : ContentPage
     {
-        public Page3()
+        public Messages()
         {
             InitializeComponent();
         }
     }
+
 }

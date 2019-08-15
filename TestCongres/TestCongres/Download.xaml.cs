@@ -10,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace TestCongres
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class Download : ContentPage
     {
-        public Page1()
+        public Download()
         {
             InitializeComponent();
         }
 
-        async private void btnAgendaClicked(object sender, EventArgs e)
+        async private void btnBack(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Agenda());
+            await Navigation.PopModalAsync();
         }
     }
 }

@@ -4,12 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TestCongres.Page2">
+             x:Class="TestCongres.Download">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Page 2 "
+            <Label Text="Download !!!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button Text="Retour page principale" Clicked="btnBack"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -5,7 +5,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TestCongres.Page1">
+             x:Class="TestCongres.Accueil">
     <ContentPage.Content>
         <StackLayout Padding="20" HorizontalOptions="Center">
             <Image Source="LogoAtleon-petit.png"/>
@@ -15,7 +15,8 @@
                 <ImageButton Source="conferenciers.png" WidthRequest="100"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
-                <ImageButton Source="exposants.png" WidthRequest="200"/>
+                <ImageButton Source="exposants.png" WidthRequest="150" />
+                <ImageButton Source="download.png" WidthRequest="100" Clicked="btnDownloadClicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
