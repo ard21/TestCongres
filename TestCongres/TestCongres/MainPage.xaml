@@ -9,28 +9,8 @@
              x:Class="TestCongres.MainPage">
 
     <TabbedPage.Children>
-        <mypages:Page1 Title="Plan de cours"></mypages:Page1>
-        <mypages:Page2 Title="Contacts"></mypages:Page2>
+        <mypages:Page1 Title="Accueil"></mypages:Page1>
+        <mypages:Page2 Title="Messages"></mypages:Page2>
+        <mypages:Page3 Title="Participants"></mypages:Page3>
     </TabbedPage.Children>
-
-    <ContentPage Title="Accueil">
-        <StackLayout>
-            <!-- Place new controls here -->
-            <Label Text="Page d'accueil des congressistes" 
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage>
-    
-
-    <ContentPage Title="Paramètres">
-        <StackLayout>
-            <!-- Place new controls here -->
-            <Label Text="Page des paramètres" 
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage>
-
-
 </TabbedPage>

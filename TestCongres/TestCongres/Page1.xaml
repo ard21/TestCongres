@@ -1,15 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:TestCongres"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TestCongres.Page1">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Page ALAIN"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20" HorizontalOptions="Center">
+            <Image Source="LogoAtleon-petit.png"/>
+            <Label Text="Congrès annuel CNQ 2019" HorizontalOptions="Center" FontSize="Large"></Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="50" Spacing="50">
+                <ImageButton Source="agenda.png" WidthRequest="100" Clicked="btnAgendaClicked"/>
+                <ImageButton Source="conferenciers.png" WidthRequest="100"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
+                <ImageButton Source="exposants.png" WidthRequest="200"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

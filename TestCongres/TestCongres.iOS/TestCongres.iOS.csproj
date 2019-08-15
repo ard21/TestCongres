@@ -124,8 +124,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.673156" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -133,5 +133,17 @@
       <Project>{DF0F924F-F07A-415D-8985-DBD7055DFB8A}</Project>
       <Name>TestCongres</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LogoAtleon-petit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\conferenciers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\agenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\exposants.png" />
   </ItemGroup>
 </Project>
