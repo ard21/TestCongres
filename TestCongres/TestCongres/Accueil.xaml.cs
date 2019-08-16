@@ -26,5 +26,15 @@ namespace TestCongres
         {
             await Navigation.PushModalAsync(new Download(), false);
         }
+
+        async private void btnExposantClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Exposant(), false);
+        }
+
+        async private void btnConferencierClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Exposant(), false);
+        }
     }
 }

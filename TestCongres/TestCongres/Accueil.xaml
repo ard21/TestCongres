@@ -8,16 +8,17 @@
              x:Class="TestCongres.Accueil">
     <ContentPage.Content>
         <StackLayout Padding="20" HorizontalOptions="Center">
-            <Image Source="LogoAtleon-petit.png"/>
-            <Label Text="Congrès annuel CNQ 2019" HorizontalOptions="Center" FontSize="Large"></Label>
+            <Image Source="logo-chambre-des-notaires.png" HeightRequest="75"/>
+            <Label Text="Congrès annuel 2019" HorizontalOptions="Center" FontSize="Large"></Label>
+            <Image Source="TropicLabs_wave-banner_test.gif" HeightRequest="50 "/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="50" Spacing="50">
                 <ImageButton Source="agenda.png" WidthRequest="100" Clicked="btnAgendaClicked"/>
-                <ImageButton Source="conferenciers.png" WidthRequest="100"/>
+                <ImageButton Source="conferenciers.png" WidthRequest="100" Clicked="btnConferencierClicked"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
-                <ImageButton Source="exposants.png" WidthRequest="150" />
+                <ImageButton Source="exposants.png" WidthRequest="150" Clicked="btnExposantClicked" />
                 <ImageButton Source="download.png" WidthRequest="100" Clicked="btnDownloadClicked"/>
             </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+     </ContentPage.Content>
 </ContentPage>

@@ -8,9 +8,9 @@
              mc:Ignorable="d"
              x:Class="TestCongres.MainPage">
         <TabbedPage.Children>
-            <mypages:Accueil Title="Accueil"></mypages:Accueil  >
-            <mypages:Favoris Title="Favoris"></mypages:Favoris>
-            <mypages:Messages Title="Messages"></mypages:Messages>
-            <mypages:Participants Title="Participants"></mypages:Participants>
+            <mypages:Accueil Title="Accueil" IconImageSource="accueil.png"></mypages:Accueil  >
+            <mypages:Favoris Title="Favoris" IconImageSource="favori.png"></mypages:Favoris>
+            <mypages:Messages Title="Messages" IconImageSource="courrier.png"></mypages:Messages>
+            <mypages:Participants Title="Participants" IconImageSource="participant.png"></mypages:Participants>
         </TabbedPage.Children>
 </TabbedPage>

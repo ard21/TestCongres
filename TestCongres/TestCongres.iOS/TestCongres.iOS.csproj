@@ -63,6 +63,12 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>woman3.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -141,12 +147,18 @@
     <BundleResource Include="Resources\conferenciers.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\agenda.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\exposants.png" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\accueil.png" />
+    <BundleResource Include="Resources\courrier.png" />
+    <BundleResource Include="Resources\participant.png" />
+    <BundleResource Include="Resources\favori.png" />
+    <BundleResource Include="Resources\logo-chambre-des-notaires.png" />
+    <BundleResource Include="Resources\TropicLabs_wave-banner_test.gif" />
+    <BundleResource Include="Resources\agenda.png" />
     <BundleResource Include="Resources\download.png" />
+    <BundleResource Include="Resources\baniere.gif" />
+    <Content Include="woman3.ico" />
   </ItemGroup>
 </Project>
