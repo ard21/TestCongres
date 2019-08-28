@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace TestCongres
 {
@@ -15,8 +16,21 @@ namespace TestCongres
         public Accueil()
         {
             InitializeComponent();
+            SizeChanged += OnSizeChanged;
         }
+        void OnSizeChanged(object sender, EventArgs e)
+        {
+            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
 
+            if (orientation == DisplayOrientation.Landscape)
+            {
+                //MainPage = new Page1();
+            }
+            else
+            {
+                //MainPage = new Page2();
+            }
+        }
         async private void btnAgendaClicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new Agenda(), false);
