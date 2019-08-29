@@ -11,14 +11,17 @@
             <Image Source="logo-chambre-des-notaires.png" HeightRequest="75"/>
             <Label Text="Congrès annuel 2019" HorizontalOptions="Center" FontSize="Large"></Label>
             <Image Source="TropicLabs_wave-banner_test.gif" HeightRequest="50 "/>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="50" Spacing="50">
+            <StackLayout x:Name="StackImage1" IsVisible="True" Orientation="Horizontal" HorizontalOptions="Center" Padding="50" Spacing="50">
                 <ImageButton Source="agenda.png" WidthRequest="100" Clicked="btnAgendaClicked"/>
                 <ImageButton Source="conferenciers.png" WidthRequest="100" Clicked="btnConferencierClicked"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
+            <StackLayout x:Name="StackImage2" IsVisible="True" Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
                 <ImageButton Source="exposants.png" WidthRequest="150" Clicked="btnExposantClicked" />
                 <ImageButton Source="download.png" WidthRequest="100" Clicked="btnDownloadClicked"/>
             </StackLayout>
+            <StackLayout x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center">
+                <Image Source="barcode.png" HeightRequest="150"/>
+            </StackLayout>
         </StackLayout>
-     </ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>

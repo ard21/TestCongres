@@ -24,11 +24,17 @@ namespace TestCongres
 
             if (orientation == DisplayOrientation.Landscape)
             {
-                //MainPage = new Page1();
+                StackImage1.IsVisible = false;
+                StackImage2.IsVisible = false;
+                StackBarCode.IsVisible = true;
+                //await Navigation.PushModalAsync(new BarCode(), false);
             }
             else
             {
-                //MainPage = new Page2();
+                StackImage1.IsVisible = true;
+                StackImage2.IsVisible = true;
+                StackBarCode.IsVisible = false;
+                //await Navigation.PopModalAsync();
             }
         }
         async private void btnAgendaClicked(object sender, EventArgs e)

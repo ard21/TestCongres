@@ -159,6 +159,7 @@
     <BundleResource Include="Resources\agenda.png" />
     <BundleResource Include="Resources\download.png" />
     <BundleResource Include="Resources\baniere.gif" />
+    <BundleResource Include="Resources\barcode.png" />
     <Content Include="woman3.ico" />
   </ItemGroup>
 </Project>
