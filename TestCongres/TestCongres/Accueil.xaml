@@ -5,22 +5,37 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
              x:Class="TestCongres.Accueil">
     <ContentPage.Content>
-        <StackLayout Padding="20" HorizontalOptions="Center">
+        <StackLayout Padding="0,20,0,0" HorizontalOptions="Center">
             <Image Source="logo-chambre-des-notaires.png" HeightRequest="75"/>
             <Label Text="Congrès annuel 2019" HorizontalOptions="Center" FontSize="Large"></Label>
-            <Image Source="TropicLabs_wave-banner_test.gif" HeightRequest="50 "/>
-            <StackLayout x:Name="StackImage1" IsVisible="True" Orientation="Horizontal" HorizontalOptions="Center" Padding="50" Spacing="50">
-                <ImageButton Source="agenda.png" WidthRequest="100" Clicked="btnAgendaClicked"/>
-                <ImageButton Source="conferenciers.png" WidthRequest="100" Clicked="btnConferencierClicked"/>
+            <StackLayout x:Name="StackImage">
+                <StackLayout HorizontalOptions="Fill" IsVisible="True">
+                    <Image Source="TropicLabs_wave-banner_test.gif"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="20" Spacing="50">
+                    <ImageButton Source="myAgenda.png" WidthRequest="100" Clicked="btnMyAgendaClicked"/>
+                    <ImageButton Source="agenda.png" WidthRequest="100" Clicked="btnAgendaClicked"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
+                    <ImageButton Source="conferenciers.png" WidthRequest="100" Clicked="btnConferencierClicked"/>
+                    <ImageButton Source="exposants.png" WidthRequest="150" Clicked="btnExposantClicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
+                    <ImageButton Source="maps.png" WidthRequest="100" Clicked="btnMapsClicked" />
+                    <ImageButton Source="download.png" WidthRequest="100" Clicked="btnDownloadClicked"/>
+                </StackLayout>
             </StackLayout>
-            <StackLayout x:Name="StackImage2" IsVisible="True" Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
-                <ImageButton Source="exposants.png" WidthRequest="150" Clicked="btnExposantClicked" />
-                <ImageButton Source="download.png" WidthRequest="100" Clicked="btnDownloadClicked"/>
-            </StackLayout>
-            <StackLayout x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center">
-                <Image Source="barcode.png" HeightRequest="150"/>
+            <StackLayout x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" Orientation="Vertical">
+                <zxing:ZXingBarcodeImageView x:Name="zxingBarCode" BarcodeFormat="EAN_13">
+                    <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                        <zxcm:EncodingOptions Height="150" />
+                    </zxing:ZXingBarcodeImageView.BarcodeOptions>
+                </zxing:ZXingBarcodeImageView>
+                <Label x:Name="lblBarCode" HorizontalOptions="Center" FontSize="Large"></Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

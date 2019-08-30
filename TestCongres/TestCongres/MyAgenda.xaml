@@ -4,12 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TestCongres.BarCode">
+             x:Class="TestCongres.MyAgenda">
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="barcode.png"
+            <Label Text="Voici mon Agenda !!!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button Text="Retour page principale" Clicked="btnBack"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

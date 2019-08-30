@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using ZXing;
+using System.IO;
 
 namespace TestCongres
 {
@@ -24,17 +26,30 @@ namespace TestCongres
 
             if (orientation == DisplayOrientation.Landscape)
             {
-                StackImage1.IsVisible = false;
-                StackImage2.IsVisible = false;
+                StackImage.IsVisible = false;
                 StackBarCode.IsVisible = true;
+                RenderBarcode();
                 //await Navigation.PushModalAsync(new BarCode(), false);
             }
             else
             {
-                StackImage1.IsVisible = true;
-                StackImage2.IsVisible = true;
+                StackImage.IsVisible = true;
                 StackBarCode.IsVisible = false;
                 //await Navigation.PopModalAsync();
+            }
+        }
+        public void RenderBarcode()
+        {
+            var codeBarMembre = "Alain";
+            if (codeBarMembre != null)
+            {
+                //var imageAsBytes = writer.Write(codeBarMembre);
+
+                // Render the image
+                //zxingBarCode.Source = ImageSource.FromStream(() => new MemoryStream(imageAsBytes));
+                zxingBarCode.BarcodeValue = codeBarMembre;
+                lblBarCode.Text = codeBarMembre;
+                //_label.Text = App.UserProfile.UserId.ToString();
             }
         }
         async private void btnAgendaClicked(object sender, EventArgs e)
@@ -55,6 +70,16 @@ namespace TestCongres
         async private void btnConferencierClicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new Exposant(), false);
+        }
+
+        async private void btnMapsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Maps(), false);
+        }
+
+        async private void btnMyAgendaClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MyAgenda(), false);
         }
     }
 }
