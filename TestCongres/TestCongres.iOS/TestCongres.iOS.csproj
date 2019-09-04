@@ -172,6 +172,7 @@
     <BundleResource Include="Resources\maps.png" />
     <BundleResource Include="Resources\mapsCNQ.png" />
     <BundleResource Include="Resources\myAgenda.png" />
+    <BundleResource Include="Resources\WalterRelax.jpg" />
     <Content Include="woman3.ico" />
   </ItemGroup>
 </Project>
