@@ -13,10 +13,10 @@
               ItemsSource="{Binding MenuItems}">
       <d:ListView.ItemsSource>
           <x:Array Type="{x:Type x:String}">
-                    <x:String>Atleon inc.</x:String>
-                    <x:String>innovision+ inc.</x:String>
-                    <x:String>APE inc.</x:String>
-                    <x:String>IPÉ inc.</x:String>
+                    <x:String>3JNA Solutions Inc.</x:String>
+                    <x:String>AdVitam</x:String>
+                    <x:String>Compagnie d'assurances titres Stewart</x:String>
+                    <x:String>Notaires Jurisconseil</x:String>
           </x:Array>
       </d:ListView.ItemsSource>
       <ListView.Header>
