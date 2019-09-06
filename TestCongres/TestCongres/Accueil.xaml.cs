@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
-using ZXing;
 using System.IO;
 
 namespace TestCongres
@@ -47,7 +46,7 @@ namespace TestCongres
 
                 // Render the image
                 //zxingBarCode.Source = ImageSource.FromStream(() => new MemoryStream(imageAsBytes));
-                zxingBarCode.BarcodeValue = codeBarMembre;
+                //zxingBarCode.BarcodeValue = codeBarMembre;
                 lblBarCode.Text = codeBarMembre;
                 //_label.Text = App.UserProfile.UserId.ToString();
             }

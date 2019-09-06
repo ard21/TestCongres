@@ -5,8 +5,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
-             xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfBarcode.XForms;assembly=Syncfusion.SfBarcode.XForms" 
              x:Class="TestCongres.Accueil">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0" HorizontalOptions="Center">
@@ -30,11 +29,8 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" Orientation="Vertical">
-                <zxing:ZXingBarcodeImageView x:Name="zxingBarCode" BarcodeFormat="EAN_13">
-                    <zxing:ZXingBarcodeImageView.BarcodeOptions>
-                        <zxcm:EncodingOptions Height="150" />
-                    </zxing:ZXingBarcodeImageView.BarcodeOptions>
-                </zxing:ZXingBarcodeImageView>
+                <syncfusion:SfBarcode x:Name="codeBarMembre" BackgroundColor="White" Text="Alain" Symbology="Code39">
+                </syncfusion:SfBarcode>
                 <Label x:Name="lblBarCode" HorizontalOptions="Center" FontSize="Large"></Label>
             </StackLayout>
         </StackLayout>
