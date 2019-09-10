@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
-using System.IO;
 
 namespace TestCongres
 {
@@ -28,13 +23,11 @@ namespace TestCongres
                 StackImage.IsVisible = false;
                 StackBarCode.IsVisible = true;
                 RenderBarcode();
-                //await Navigation.PushModalAsync(new BarCode(), false);
             }
             else
             {
                 StackImage.IsVisible = true;
                 StackBarCode.IsVisible = false;
-                //await Navigation.PopModalAsync();
             }
         }
         public void RenderBarcode()
@@ -42,13 +35,7 @@ namespace TestCongres
             var codeBarMembre = "Alain";
             if (codeBarMembre != null)
             {
-                //var imageAsBytes = writer.Write(codeBarMembre);
-
                 // Render the image
-                //zxingBarCode.Source = ImageSource.FromStream(() => new MemoryStream(imageAsBytes));
-                //zxingBarCode.BarcodeValue = codeBarMembre;
-                lblBarCode.Text = codeBarMembre;
-                //_label.Text = App.UserProfile.UserId.ToString();
             }
         }
         async private void btnAgendaClicked(object sender, EventArgs e)

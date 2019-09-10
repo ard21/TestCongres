@@ -5,13 +5,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:syncfusion="clr-namespace:Syncfusion.SfBarcode.XForms;assembly=Syncfusion.SfBarcode.XForms" 
              x:Class="TestCongres.Accueil">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0" HorizontalOptions="Center">
             <Image Source="logo-chambre-des-notaires.png" HeightRequest="75"/>
             <Label Text="Congrès annuel 2019" HorizontalOptions="Center" FontSize="Large"></Label>
-            <StackLayout x:Name="StackImage">
+            <StackLayout x:Name="StackImage" IsVisible="True">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Image Source="TropicLabs_wave-banner_test.gif" HeightRequest="65"/>
                 </StackLayout>
@@ -28,10 +27,8 @@
                     <ImageButton Source="download.png" WidthRequest="100" Clicked="btnDownloadClicked"/>
                 </StackLayout>
             </StackLayout>
-            <StackLayout x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" Orientation="Vertical">
-                <syncfusion:SfBarcode x:Name="codeBarMembre" BackgroundColor="White" Text="Alain" Symbology="Code39">
-                </syncfusion:SfBarcode>
-                <Label x:Name="lblBarCode" HorizontalOptions="Center" FontSize="Large"></Label>
+            <StackLayout Padding="20" x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" >
+                <Label Text="*C0818-94*" FontSize="60" FontFamily="c39hrp36dltt"></Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

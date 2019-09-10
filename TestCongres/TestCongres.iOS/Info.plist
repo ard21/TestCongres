@@ -30,9 +30,13 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>TestCongres</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>c39hrp36dltt.ttf</string>
+	</array>
 </dict>
 </plist>
