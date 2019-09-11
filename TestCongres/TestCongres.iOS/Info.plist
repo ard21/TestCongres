@@ -32,11 +32,11 @@
 	<string>TestCongres</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>c39hrp36dltt.ttf</string>
 	</array>
+	<key>iPhone OS required</key>
+	<string>12.2</string>
 </dict>
 </plist>

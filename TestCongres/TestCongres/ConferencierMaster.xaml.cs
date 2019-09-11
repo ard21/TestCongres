@@ -13,31 +13,31 @@ using Xamarin.Forms.Xaml;
 namespace TestCongres
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ExposantMaster : ContentPage
+    public partial class ConferencierMaster : ContentPage
     {
         public ListView ListView;
 
-        public ExposantMaster()
+        public ConferencierMaster()
         {
             InitializeComponent();
 
-            BindingContext = new ExposantMasterViewModel();
+            BindingContext = new ConferencierMasterViewModel();
             ListView = MenuItemsListView;
         }
 
-        class ExposantMasterViewModel : INotifyPropertyChanged
+        class ConferencierMasterViewModel : INotifyPropertyChanged
         {
-            public ObservableCollection<ExposantMasterMenuItem> MenuItems { get; set; }
+            public ObservableCollection<ConferencierMasterMenuItem> MenuItems { get; set; }
 
-            public ExposantMasterViewModel()
+            public ConferencierMasterViewModel()
             {
-                MenuItems = new ObservableCollection<ExposantMasterMenuItem>(new[]
+                MenuItems = new ObservableCollection<ConferencierMasterMenuItem>(new[]
                 {
-                    new ExposantMasterMenuItem { Id = 0, Title = "3JNA Solutions Inc.", ShortTitle = "3" },
-                    new ExposantMasterMenuItem { Id = 1, Title = "AdVitam", ShortTitle = "A" },
-                    new ExposantMasterMenuItem { Id = 1, Title = "Atleon inc.", ShortTitle = "A" },
-                    new ExposantMasterMenuItem { Id = 2, Title = "Compagnie d'assurances titres Stewart", ShortTitle = "C" },
-                    new ExposantMasterMenuItem { Id = 3, Title = "Notaires Jurisconseil", ShortTitle = "N" },
+                    new ConferencierMasterMenuItem { Id = 0, Title = "Page 1" },
+                    new ConferencierMasterMenuItem { Id = 1, Title = "Page 2" },
+                    new ConferencierMasterMenuItem { Id = 2, Title = "Page 3" },
+                    new ConferencierMasterMenuItem { Id = 3, Title = "Page 4" },
+                    new ConferencierMasterMenuItem { Id = 4, Title = "Page 5" },
                 });
             }
 

@@ -4,22 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TestCongres.ExposantMaster"
-             Title="Exposants">
+             x:Class="TestCongres.ConferencierMaster"
+             Title="Master">
   <StackLayout>
     <ListView x:Name="MenuItemsListView"
-              IsGroupingEnabled="True"
-              GroupDisplayBinding="{Binding Title}"
-              GroupShortNameBinding="{Binding ShortTitle}"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <d:ListView.ItemsSource>
           <x:Array Type="{x:Type x:String}">
-                    <x:String>3JNA Solutions Inc.</x:String>
-                    <x:String>AdVitam</x:String>
-                    <x:String>Compagnie d'assurances titres Stewart</x:String>
-                    <x:String>Notaires Jurisconseil</x:String>
+              <x:String>Page 1</x:String>
+              <x:String>Page 2</x:String>
+              <x:String>Page 3</x:String>
+              <x:String>Page 4</x:String>
+              <x:String>Page 5</x:String>
           </x:Array>
       </d:ListView.ItemsSource>
       <ListView.Header>
@@ -38,7 +36,7 @@
           <Label
               Grid.Column="1"
               Grid.Row="2"
-              Text="Exposants"
+              Text="AppName"
               Style="{DynamicResource SubtitleStyle}"/>
         </Grid>
       </ListView.Header>

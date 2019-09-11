@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace TestCongres
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ExposantDetail : ContentPage
+    public partial class ConferencierDetail : ContentPage
     {
-        public ExposantDetail()
+        public ConferencierDetail()
         {
             InitializeComponent();
-        }
-
-        async private void btnMaps(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new Maps(), false);
         }
     }
 }

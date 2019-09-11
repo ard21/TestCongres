@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 namespace TestCongres
 {
 
-    public class ExposantMasterMenuItem
+    public class ConferencierMasterMenuItem
     {
-        public ExposantMasterMenuItem()
+        public ConferencierMasterMenuItem()
         {
-            TargetType = typeof(ExposantMasterMenuItem);
+            TargetType = typeof(ConferencierMasterMenuItem);
         }
         public int Id { get; set; }
         public string Title { get; set; }
-        public string ShortTitle { get; set; }
 
         public Type TargetType { get; set; }
     }

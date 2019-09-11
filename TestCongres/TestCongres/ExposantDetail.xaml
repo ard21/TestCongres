@@ -26,6 +26,6 @@
         <Label Grid.Row="3" Grid.Column="1" x:Name="courriel" Text="alain.ashton@avancie.com"/>
         <Label Grid.Row="4" Grid.Column="0" Text="Téléphone"/>
         <Label Grid.Row="4" Grid.Column="1" x:Name="telephone" Text="514-293-7418"/>
-        <Label Grid.Row="5" Grid.ColumnSpan="2" Text="Kiosque #25" HorizontalOptions="CenterAndExpand"/>
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Text="Kiosque #25" Clicked="btnMaps" HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" />
     </Grid>
 </ContentPage>
