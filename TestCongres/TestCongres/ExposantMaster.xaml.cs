@@ -31,28 +31,7 @@ namespace TestCongres
 
             public ExposantMasterViewModel()
             {
-                MenuItems = RempliTableExposants(null);
-
-                //MenuItems = new ObservableCollection<ExposantMasterMenuItem>(new[]
-                //{
-                //    new ExposantMasterMenuItem { Id = 0, Title = "3JNA Solutions Inc.", ShortTitle = "3" },
-                //    new ExposantMasterMenuItem { Id = 1, Title = "ACCEO Solutions ", ShortTitle = "A" },
-                //    new ExposantMasterMenuItem { Id = 2, Title = "AdVitam", ShortTitle = "A" },
-                //    new ExposantMasterMenuItem { Id = 3, Title = "Atleon inc.", ShortTitle = "A" },
-                //    new ExposantMasterMenuItem { Id = 4, Title = "Amalgama", ShortTitle = "A" },
-                //    new ExposantMasterMenuItem { Id = 5, Title = "Calen-Droit", ShortTitle = "C" },
-                //    new ExposantMasterMenuItem { Id = 6, Title = "CAP - Association canadienne des parajuristes", ShortTitle = "C" },
-                //    new ExposantMasterMenuItem { Id = 7, Title = "Centres de justice de proximité du Québec", ShortTitle = "C" },
-                //    new ExposantMasterMenuItem { Id = 8, Title = "Compagnie d'assurances titres Stewart", ShortTitle = "C" },
-                //    new ExposantMasterMenuItem { Id = 9, Title = "Conservation de la nature", ShortTitle = "C" },
-                //    new ExposantMasterMenuItem { Id = 10, Title = "Éditions juridiques FD inc.", ShortTitle = "E" },
-                //    new ExposantMasterMenuItem { Id = 11, Title = "Éditions Yvon Blais", ShortTitle = "E" },
-                //    new ExposantMasterMenuItem { Id = 12, Title = "Educaloi", ShortTitle = "E" },
-                //    new ExposantMasterMenuItem { Id = 13, Title = "Encans Forand", ShortTitle = "E" },
-                //    new ExposantMasterMenuItem { Id = 14, Title = "Étude généalogique Savary", ShortTitle = "E" },
-                //    new ExposantMasterMenuItem { Id = 15, Title = "Évolia Transition inc.", ShortTitle = "E" },
-                //    new ExposantMasterMenuItem { Id = 16, Title = "Notaires Jurisconseil", ShortTitle = "N" },
-                //});
+                MenuItems = new ObservableCollection<ExposantMasterMenuItem> (RempliTableExposants(null));
             }
 
             #region INotifyPropertyChanged Implementation
@@ -69,10 +48,10 @@ namespace TestCongres
 
         private void searchDone(object sender, TextChangedEventArgs e)
         {
-            MenuItemsListView = RempliTableExposants(e.NewTextValue);
+            MenuItemsListView.ItemsSource = RempliTableExposants(e.NewTextValue);
         }
 
-        private static ObservableCollection<ExposantMasterMenuItem> RempliTableExposants(string searchText)
+        private static IEnumerable<ExposantMasterMenuItem> RempliTableExposants(string searchText= null)
         {
             var ExposantsSearch = new ObservableCollection<ExposantMasterMenuItem>(new[]
                 {
@@ -93,7 +72,7 @@ namespace TestCongres
                     new ExposantMasterMenuItem { Id = 14, Title = "Étude généalogique Savary", ShortTitle = "E" },
                     new ExposantMasterMenuItem { Id = 15, Title = "Évolia Transition inc.", ShortTitle = "E" },
                     new ExposantMasterMenuItem { Id = 16, Title = "Notaires Jurisconseil", ShortTitle = "N" },
-                });
+                });{ ;
 
             if (String.IsNullOrWhiteSpace(searchText))
                 return ExposantsSearch;
