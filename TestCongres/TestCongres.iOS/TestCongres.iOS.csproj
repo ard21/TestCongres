@@ -183,4 +183,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\3jnaConseil.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\expanded_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\collapsed_blue.png" />
+  </ItemGroup>
 </Project>

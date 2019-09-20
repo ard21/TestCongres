@@ -4,8 +4,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -31,7 +29,7 @@ namespace TestCongres
 
             public ExposantMasterViewModel()
             {
-                MenuItems = new ObservableCollection<ExposantMasterMenuItem> (RempliTableExposants(null));
+                MenuItems = new ObservableCollection<ExposantMasterMenuItem>(RempliTableExposants(null));
             }
 
             #region INotifyPropertyChanged Implementation
@@ -51,7 +49,7 @@ namespace TestCongres
             MenuItemsListView.ItemsSource = RempliTableExposants(e.NewTextValue);
         }
 
-        private static IEnumerable<ExposantMasterMenuItem> RempliTableExposants(string searchText= null)
+        private static IEnumerable<ExposantMasterMenuItem> RempliTableExposants(string searchText = null)
         {
             var ExposantsSearch = new ObservableCollection<ExposantMasterMenuItem>(new[]
                 {
@@ -72,7 +70,7 @@ namespace TestCongres
                     new ExposantMasterMenuItem { Id = 14, Title = "Étude généalogique Savary", ShortTitle = "E" },
                     new ExposantMasterMenuItem { Id = 15, Title = "Évolia Transition inc.", ShortTitle = "E" },
                     new ExposantMasterMenuItem { Id = 16, Title = "Notaires Jurisconseil", ShortTitle = "N" },
-                });{ ;
+                });
 
             if (String.IsNullOrWhiteSpace(searchText))
                 return ExposantsSearch;
