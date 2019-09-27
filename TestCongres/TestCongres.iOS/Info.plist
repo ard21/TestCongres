@@ -38,5 +38,7 @@
 	</array>
 	<key>iPhone OS required</key>
 	<string>12.2</string>
+	<key>MinimumOSVersion</key>
+	<string>12.2</string>
 </dict>
 </plist>

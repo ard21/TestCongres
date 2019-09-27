@@ -54,7 +54,7 @@ namespace TestCongres
 
         async private void btnConferencierClicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Exposant(), false);
+            await Navigation.PushModalAsync(new Conferenciers(), false);
         }
 
         async private void btnMapsClicked(object sender, EventArgs e)
