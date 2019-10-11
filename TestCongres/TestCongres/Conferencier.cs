@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestCongres
 {
-    class Conferencier
+    public class Conferencier
     {
         public string Nom { get; set; }
         public string Titre { get; set; }

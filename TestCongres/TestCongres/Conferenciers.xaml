@@ -5,40 +5,39 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TestCongres.Conferenciers">
-  <ListView x:Name="MyListView"
-            ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
-    <d:ListView.ItemsSource>
-        <x:Array Type="{x:Type x:String}">
-            <x:String>Item 1</x:String>
-            <x:String>Item 2</x:String>
-            <x:String>Item 3</x:String>
-            <x:String>Item 4</x:String>
-            <x:String>Item 5</x:String>
-        </x:Array>
-    </d:ListView.ItemsSource>
-    <!-- Built in Cells 
-       <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding .}" d:Text="{Binding .}" />
-            </DataTemplate>
-        </ListView.ItemTemplate -->
-
-      <!-- Custom View Cells -->
-      <ListView.ItemTemplate>
-          <DataTemplate>
-            <ViewCell>
-              <StackLayout>
-                <Label Text="{Binding Text}" 
-                       d:Text="{Binding .}"
-                       Style="{DynamicResource ListItemTextStyle}" />
-                <Label Text="{Binding Detail}" 
-                       d:Text="Detail"
-                       Style="{DynamicResource ListItemDetailTextStyle}"/>
-              </StackLayout>
-            </ViewCell>
-          </DataTemplate>
-       </ListView.ItemTemplate>
-  </ListView>
+    <ContentPage.Content>
+        <ListView  x:Name="GroupedView"
+            GroupDisplayBinding="{Binding Categorie}"
+            RowHeight="75"
+            GroupShortNameBinding="{Binding TitreSommaire}"
+            IsGroupingEnabled="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Nom}"
+            Detail="{Binding Titre}"
+            ImageSource="{Binding Photo}"
+            Height="75"
+            TextColor="#005569"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5,5,5,5" BackgroundColor="#E2F5F9">
+                            <Button Image="{Binding StateIcon}"
+                      BackgroundColor="Transparent"
+                      BorderColor="Transparent"
+                      BorderWidth="0"
+                      Clicked="HeaderTapped" 
+                      CommandParameter="{Binding .}"/>
+                            <Label Text="{Binding CategorieNbItem}" 
+                     TextColor="#005569"
+                     FontSize="15"
+                     VerticalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>

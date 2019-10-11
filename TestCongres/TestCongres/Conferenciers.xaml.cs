@@ -12,22 +12,43 @@ namespace TestCongres
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Conferenciers : ContentPage
     {
-        public ObservableCollection<string> Items { get; set; }
+        private ObservableCollection<ConferencierGroup> _allGroups;
+        private ObservableCollection<ConferencierGroup> _expandedGroups;
 
         public Conferenciers()
         {
             InitializeComponent();
+            _allGroups = ConferencierGroup.All;
+            UpdateListContent();
+        }
 
-            Items = new ObservableCollection<string>
+        private void HeaderTapped(object sender, EventArgs args)
+        {
+            int selectedIndex = _expandedGroups.IndexOf(
+                ((ConferencierGroup)((Button)sender).CommandParameter));
+            _allGroups[selectedIndex].Expanded = !_allGroups[selectedIndex].Expanded;
+            UpdateListContent();
+        }
+
+        private void UpdateListContent()
+        {
+            _expandedGroups = new ObservableCollection<ConferencierGroup>();
+            foreach (ConferencierGroup group in _allGroups)
             {
-                "Item 1",
-                "Item 2",
-                "Item 3",
-                "Item 4",
-                "Item 5"
-            };
-
-            MyListView.ItemsSource = Items;
+                //Create new FoodGroups so we do not alter original list
+                ConferencierGroup newGroup = new ConferencierGroup(group.Categorie, group.TitreSommaire, group.Expanded);
+                //Add the count of food items for Lits Header Titles to use
+                newGroup.CategorieDecompte = group.Count;
+                if (group.Expanded)
+                {
+                    foreach (Conferencier food in group)
+                    {
+                        newGroup.Add(food);
+                    }
+                }
+                _expandedGroups.Add(newGroup);
+            }
+            GroupedView.ItemsSource = _expandedGroups;
         }
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
