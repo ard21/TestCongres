@@ -7,9 +7,7 @@
              x:Class="TestCongres.Participants">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Participants"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" Source="https://secure.innovision.qc.ca/Demo/membres/Default.aspx" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

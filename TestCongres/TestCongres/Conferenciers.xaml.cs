@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace TestCongres
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)] 
     public partial class Conferenciers : ContentPage
     {
         private ObservableCollection<ConferencierGroup> _allGroups;
@@ -35,15 +35,13 @@ namespace TestCongres
             _expandedGroups = new ObservableCollection<ConferencierGroup>();
             foreach (ConferencierGroup group in _allGroups)
             {
-                //Create new FoodGroups so we do not alter original list
                 ConferencierGroup newGroup = new ConferencierGroup(group.Categorie, group.TitreSommaire, group.Expanded);
-                //Add the count of food items for Lits Header Titles to use
                 newGroup.CategorieDecompte = group.Count;
                 if (group.Expanded)
                 {
-                    foreach (Conferencier food in group)
+                    foreach (Conferencier gars in group)
                     {
-                        newGroup.Add(food);
+                        newGroup.Add(gars);
                     }
                 }
                 _expandedGroups.Add(newGroup);
@@ -60,6 +58,17 @@ namespace TestCongres
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
+        }
+
+        private void searchDone(object sender, TextChangedEventArgs e)
+        {
+            //GroupedView.ItemsSource = RempliTableExposants(e.NewTextValue);
+
+        }
+
+        async private void btnMenuClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }

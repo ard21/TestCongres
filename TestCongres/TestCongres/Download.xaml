@@ -7,10 +7,8 @@
              x:Class="TestCongres.Download">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Download !!!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
             <Button Text="Retour page principale" Clicked="btnBack"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+    
