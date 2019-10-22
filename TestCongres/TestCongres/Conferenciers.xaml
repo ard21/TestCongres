@@ -6,6 +6,16 @@
              mc:Ignorable="d"
              x:Class="TestCongres.Conferenciers">
     <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Label HorizontalOptions="Center" Text="Conférenciers"></Label>
+                <ImageButton Grid.Row="0" Grid.Column="1" Source="accueil.png" Clicked="btnMenuClicked"></ImageButton>
+            </Grid>
+            <SearchBar Grid.Row="0" Grid.Column="0" Placeholder="Rechercher un conférencier" TextChanged="searchDone"></SearchBar>
             <ListView  x:Name="GroupedView"
                 GroupDisplayBinding="{Binding Categorie}"
                 RowHeight="75"
@@ -19,6 +29,25 @@
                         TextColor="#005569"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5,5,5,5" BackgroundColor="#E2F5F9">
+                                <Button Image="{Binding StateIcon}"
+                                      BackgroundColor="Transparent"
+                                      BorderColor="Transparent"
+                                      BorderWidth="0"
+                                      Clicked="HeaderTapped" 
+                                      CommandParameter="{Binding .}"/>
+                                <Label Text="{Binding CategorieNbItem}" 
+                                     TextColor="#005569"
+                                     FontSize="15"
+                                     VerticalOptions="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
             </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

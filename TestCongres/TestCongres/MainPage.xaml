@@ -11,6 +11,6 @@
             <mypages:Accueil Title="Accueil" IconImageSource="accueil.png"></mypages:Accueil  >
             <mypages:Favoris Title="Favoris" IconImageSource="favori.png"></mypages:Favoris>
             <mypages:Messages Title="Messages" IconImageSource="courrier.png"></mypages:Messages>
-            <mypages:Participants Title="Examen" IconImageSource="test.png"></mypages:Participants>
+            <mypages:Participants Title="Examen" IconImageSource="examenMac.png"></mypages:Participants>
         </TabbedPage.Children>
 </TabbedPage>
