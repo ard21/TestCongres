@@ -274,9 +274,6 @@
     <BundleResource Include="Resources\Serge DESROSIERS.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\test.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\examenMac.png" />
+    <BundleResource Include="Resources\check-sm-%402x.png" />
   </ItemGroup>
 </Project>
