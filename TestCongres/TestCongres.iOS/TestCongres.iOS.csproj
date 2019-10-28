@@ -276,4 +276,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\check-sm-%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MesFavoris.png" />
+  </ItemGroup>
 </Project>

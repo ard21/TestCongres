@@ -100,36 +100,36 @@ namespace TestCongres
 
             Fichiers.Add(new Fichier
             {
-                Name = "Black Snub-nosed Monkey",
-                Location = "China",
+                Name = "Danser avec la réalité ",
+                Location = "510",
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/RhinopitecusBieti.jpg/320px-RhinopitecusBieti.jpg"
             });
 
             Fichiers.Add(new Fichier
             {
-                Name = "Tonkin Snub-nosed Monkey",
-                Location = "Vietnam",
+                Name = "Le droit de la famille à l’heure des choix ",
+                Location = "210E",
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Tonkin_snub-nosed_monkeys_%28Rhinopithecus_avunculus%29.jpg/320px-Tonkin_snub-nosed_monkeys_%28Rhinopithecus_avunculus%29.jpg"
             });
 
             Fichiers.Add(new Fichier
             {
-                Name = "Thomas's Langur",
-                Location = "Indonesia",
+                Name = "Fonds de prévoyance en copropriété divise ",
+                Location = "210A",
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thomas%27s_langur_Presbytis_thomasi.jpg/142px-Thomas%27s_langur_Presbytis_thomasi.jpg"
             });
 
             Fichiers.Add(new Fichier
             {
-                Name = "Purple-faced Langur",
-                Location = "Sri Lanka",
+                Name = "Coopérative d’habitation à capitalisation individuelle ",
+                Location = "510",
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Semnopithèque_blanchâtre_mâle.JPG/192px-Semnopithèque_blanchâtre_mâle.JPG"
             });
 
             Fichiers.Add(new Fichier
             {
-                Name = "Gelada",
-                Location = "Ethiopia",
+                Name = "Le langage clair pour remplir son devoir de conseil ",
+                Location = "210A",
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Gelada-Pavian.jpg/320px-Gelada-Pavian.jpg"
             });
             BindingContext = this;
