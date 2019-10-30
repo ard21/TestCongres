@@ -23,7 +23,7 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="15" />
+                                    <ColumnDefinition Width="30" />
                                 </Grid.ColumnDefinitions>
                                 <Image Grid.RowSpan="2"
                                    Source="{Binding ImageUrl}"
@@ -38,7 +38,8 @@
                                     Grid.Column="2"
                                     HeightRequest="15"
                                     WidthRequest="15"
-                                    Source="MesFavoris.png" />
+                                    Source="MesFavoris.png" 
+                                     Pressed="btnFavoris"/>
                                 <Label Grid.Row="1"
                                    Grid.Column="1"
                                    Text="{Binding Location}"/>

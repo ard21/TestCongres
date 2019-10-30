@@ -6,10 +6,9 @@
              mc:Ignorable="d"
              x:Class="TestCongres.Messages">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Messages"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20">
+            <Label HorizontalOptions="Center" Text="allo"></Label>
+            <WebView Source="http://innovision.qc.ca/portals/1/images/exoplanet_banner_1.gif" HeightRequest="110"></WebView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -279,4 +279,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\MesFavoris.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Curveball-Newtons-Cradle-Animated-GIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\exoplanet_banner_1.gif" />
+  </ItemGroup>
 </Project>

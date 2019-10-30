@@ -137,6 +137,9 @@ namespace TestCongres
         void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Calendrier selectedItem = e.SelectedItem as Calendrier;
+
+            string str = "La conférence choisie est " + selectedItem.Name;
+            DisplayAlert("Sélection des conférences", str, "OK");
         }
 
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
@@ -146,6 +149,11 @@ namespace TestCongres
         async private void btnRetourClicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+        }
+
+        private void btnFavoris(object sender, EventArgs e)
+        {
+            DisplayAlert("Favoris", "Ajout de favoris", "OK");
         }
     }
 }
