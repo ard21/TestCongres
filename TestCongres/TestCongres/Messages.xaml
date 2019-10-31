@@ -7,8 +7,8 @@
              x:Class="TestCongres.Messages">
     <ContentPage.Content>
         <StackLayout Padding="20">
-            <Label HorizontalOptions="Center" Text="allo"></Label>
-            <WebView Source="http://innovision.qc.ca/portals/1/images/exoplanet_banner_1.gif" HeightRequest="110"></WebView>
+            <Label HorizontalOptions="Center" Text="Messages ?"></Label>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

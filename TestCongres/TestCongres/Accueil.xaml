@@ -11,8 +11,8 @@
             <Image Source="logo-chambre-des-notaires.png" HeightRequest="75"/>
             <Label Text="Congrès annuel 2019" HorizontalOptions="Center" FontSize="Large"></Label>
             <StackLayout x:Name="StackImage" IsVisible="True">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <Image Source="TropicLabs_wave-banner_test.gif" HeightRequest="65"/>
+                <StackLayout>
+                    <WebView Source="https://secure.innovision.qc.ca/demo/Images/ezgif.com-resize.gif" HeightRequest="115"></WebView>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="20" Spacing="50">
                     <ImageButton Source="myAgenda.png" WidthRequest="100" Clicked="btnMyAgendaClicked"/>
