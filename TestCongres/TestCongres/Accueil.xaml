@@ -8,27 +8,35 @@
              x:Class="TestCongres.Accueil">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0" HorizontalOptions="Center">
-            <Image Source="logo-chambre-des-notaires.png" HeightRequest="75"/>
-            <Label Text="Congrès annuel 2019" HorizontalOptions="Center" FontSize="Large"></Label>
-            <StackLayout x:Name="StackImage" IsVisible="True">
+            <RelativeLayout x:Name="StackImage" IsVisible="True" >
+                <Image Source="back_body.png"
+                    RelativeLayout.HeightConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                    RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+                <Image Source="back_header_Menu.png"
+                    RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
                 <StackLayout>
-                    <WebView Source="https://secure.innovision.qc.ca/demo/Images/ezgif.com-resize.gif" HeightRequest="115"></WebView>
+                    <Label Text="Aujourd'hui" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="30"/>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="20" Spacing="50">
-                    <ImageButton Source="myAgenda.png" WidthRequest="100" Clicked="btnMyAgendaClicked"/>
-                    <ImageButton Source="agenda.png" WidthRequest="100" Clicked="btnAgendaClicked"/>
+                <StackLayout Padding="50,170">
+                    <Grid>
+                        <Label Text="Horaire" Padding="10"/>
+                        <Image Source="btn_Horaire.png" HorizontalOptions="Start" VerticalOptions="End"/>
+                        <Button BackgroundColor="Transparent" HeightRequest="100" WidthRequest="250" CornerRadius="20" Clicked="btnAgendaClicked"></Button>
+                    </Grid>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
-                    <ImageButton Source="conferenciers.png" WidthRequest="100" Clicked="btnConferencierClicked"/>
-                    <ImageButton Source="exposants.png" WidthRequest="150" Clicked="btnExposantClicked" />
+                <StackLayout Padding="50,300">
+                    <Grid>
+                        <Label Text="Plan du site" Padding="10"/>
+                        <Image Source="btn_Map.png" HorizontalOptions="Start" VerticalOptions="End"/>
+                        <Button BackgroundColor="Transparent" HeightRequest="100" WidthRequest="150" CornerRadius="20" Clicked="btnMapsClicked"></Button>
+                    </Grid>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10" Spacing="50">
-                    <ImageButton Source="maps.png" WidthRequest="100" Clicked="btnMapsClicked" />
-                    <ImageButton Source="download.png" WidthRequest="100" Clicked="btnDownloadClicked"/>
-                </StackLayout>
-            </StackLayout>
+            </RelativeLayout>
             <StackLayout Padding="20" x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" >
-                <Label Text="*C0818-94*" FontSize="60" FontFamily="c39hrp36dltt"></Label>
+                <Label Text="*C0818-94*" FontSize="60" FontFamily="c39hrp36dltt"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

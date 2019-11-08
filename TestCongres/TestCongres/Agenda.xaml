@@ -38,7 +38,7 @@
                                     Grid.Column="2"
                                     HeightRequest="15"
                                     WidthRequest="15"
-                                    Source="MesFavoris.png" 
+                                    Source="icon_FavOFF.png" 
                                      Pressed="btnFavoris"/>
                                 <Label Grid.Row="1"
                                    Grid.Column="1"
