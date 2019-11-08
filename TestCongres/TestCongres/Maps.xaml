@@ -7,8 +7,8 @@
              x:Class="TestCongres.Maps">
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="mapsCNQ.png"></Image>
             <Button Text="Retour page principale" Clicked="btnBack"/>
+            <Image Source="mapsCNQ.png"></Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

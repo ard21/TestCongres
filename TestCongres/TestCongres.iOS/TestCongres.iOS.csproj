@@ -85,6 +85,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </BundleResource>
     <BundleResource Include="Resources\CODE39S.TTF" />
+    <BundleResource Include="Resources\Butler_Black.otf" />
+    <BundleResource Include="Resources\Butler_Bold.otf" />
+    <BundleResource Include="Resources\Butler_ExtraBold.otf" />
+    <BundleResource Include="Resources\Butler_Light.otf" />
+    <BundleResource Include="Resources\Butler_Medium.otf" />
+    <BundleResource Include="Resources\Butler_Regular.otf" />
+    <BundleResource Include="Resources\Butler_Ultra_Light.otf" />
+    <BundleResource Include="Resources\Roboto-Black.ttf" />
+    <BundleResource Include="Resources\Roboto-BlackItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Roboto-BoldItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Italic.ttf" />
+    <BundleResource Include="Resources\Roboto-Light.ttf" />
+    <BundleResource Include="Resources\Roboto-LightItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\Roboto-MediumItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\Roboto-Thin.ttf" />
+    <BundleResource Include="Resources\Roboto-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">

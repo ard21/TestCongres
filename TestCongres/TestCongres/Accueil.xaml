@@ -17,26 +17,59 @@
                 <Image Source="back_header_Menu.png"
                     RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
-                <StackLayout>
-                    <Label Text="Aujourd'hui" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="30"/>
+                <StackLayout Padding="20,20">
+                    <Label Text="Aujourd'hui" FontFamily="Butler_Bold" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="28"/>
                 </StackLayout>
-                <StackLayout Padding="50,170">
-                    <Grid>
-                        <Label Text="Horaire" Padding="10"/>
-                        <Image Source="btn_Horaire.png" HorizontalOptions="Start" VerticalOptions="End"/>
-                        <Button BackgroundColor="Transparent" HeightRequest="100" WidthRequest="250" CornerRadius="20" Clicked="btnAgendaClicked"></Button>
-                    </Grid>
-                </StackLayout>
-                <StackLayout Padding="50,300">
-                    <Grid>
-                        <Label Text="Plan du site" Padding="10"/>
-                        <Image Source="btn_Map.png" HorizontalOptions="Start" VerticalOptions="End"/>
-                        <Button BackgroundColor="Transparent" HeightRequest="100" WidthRequest="150" CornerRadius="20" Clicked="btnMapsClicked"></Button>
-                    </Grid>
-                </StackLayout>
+                <Grid Padding="50,170">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   Text="Horaire"
+                                   FontAttributes="Bold" />
+                    <ImageButton Grid.Row="1"
+                                    Grid.Column="0"
+                                    HeightRequest="115"
+                                    WidthRequest="115"
+                                    Source="btn_Horaire.png"
+                                    Grid.ColumnSpan="3"
+                                    HorizontalOptions="StartAndExpand"
+                                    Pressed="btnAgendaClicked"/>
+                    <Label Grid.Row="3"
+                                   Grid.Column="0"
+                                   Text="Plan du site"
+                                   FontAttributes="Bold" />
+                    <ImageButton Grid.Row="4"
+                                    Grid.Column="0"
+                                    HeightRequest="90"
+                                    WidthRequest="90"
+                                    Source="btn_Map.png" 
+                                    Pressed="btnMapsClicked"/>
+                    <Label Grid.Row="3"
+                                   Grid.Column="2"
+                                   Text="Fichiers"
+                                   FontAttributes="Bold" />
+                    <ImageButton Grid.Row="4"
+                                    Grid.Column="2"
+                                    HeightRequest="90"
+                                    WidthRequest="90"
+                                    Source="btn_Downloads.png" 
+                                    Pressed="btnDownloadClicked"/>
+                </Grid>
             </RelativeLayout>
             <StackLayout Padding="20" x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" >
-                <Label Text="*C0818-94*" FontSize="60" FontFamily="c39hrp36dltt"/>
+                <Image Source="logo-chambre-des-notaires.png"/>
+                <Label Text="*C0818-94*" FontSize="80" FontFamily="c39hrp36dltt" Padding="0,20"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
