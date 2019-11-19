@@ -25,7 +25,7 @@
                            HorizontalOptions="Center"
                            VerticalOptions="Center" />
                     </Frame>
-                    <Label Text="Aujourd'hui" FontFamily="Butler_Bold" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="28"/>
+                    <Label Text="Aujourd'hui" FontFamily="Butler_Bold" HorizontalOptions="Start" TextColor="White" FontSize="28"/>
                 </StackLayout>
                 <Grid Padding="50,170">
                     <Grid.RowDefinitions>
@@ -47,8 +47,8 @@
                                    FontAttributes="Bold" />
                     <ImageButton Grid.Row="1"
                                     Grid.Column="0"
-                                    HeightRequest="115"
-                                    WidthRequest="115"
+                                    HeightRequest="180"
+                                    WidthRequest="180"
                                     Source="btn_Horaire.png"
                                     Grid.ColumnSpan="3"
                                     HorizontalOptions="StartAndExpand"
@@ -73,9 +73,6 @@
                                     WidthRequest="90"
                                     Source="btn_Downloads.png" 
                                     Pressed="btnDownloadClicked"/>
-                    <Image Grid.Row="5" 
-                           Grid.ColumnSpan="3" 
-                           Source="exoplanet_banner_1.gif"/>
                 </Grid>
             </RelativeLayout>
             <StackLayout Padding="20" x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" >
