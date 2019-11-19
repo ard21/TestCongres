@@ -5,19 +5,26 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundImage="back_body.png"
              x:Class="TestCongres.Accueil">
     <ContentPage.Content>
-        <StackLayout Padding="0,20,0,0" HorizontalOptions="Center">
+        <StackLayout Padding="0,0,0,0" HorizontalOptions="Center">
             <RelativeLayout x:Name="StackImage" IsVisible="True" >
-                <Image Source="back_body.png"
-                    RelativeLayout.HeightConstraint=
-                        "{ConstraintExpression Type=RelativeToParent, Property=Height}"
-                    RelativeLayout.WidthConstraint=
-                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
                 <Image Source="back_header_Menu.png"
-                    RelativeLayout.WidthConstraint=
+                    MinimumHeightRequest="300"
+                       RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
                 <StackLayout Padding="20,20">
+                    <Frame CornerRadius="25" 
+                        HeightRequest="50"
+                           WidthRequest="50"
+                           HorizontalOptions="Start"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="Hélène TREMBLAY.png" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
                     <Label Text="Aujourd'hui" FontFamily="Butler_Bold" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="28"/>
                 </StackLayout>
                 <Grid Padding="50,170">
@@ -25,6 +32,7 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -65,6 +73,9 @@
                                     WidthRequest="90"
                                     Source="btn_Downloads.png" 
                                     Pressed="btnDownloadClicked"/>
+                    <Image Grid.Row="5" 
+                           Grid.ColumnSpan="3" 
+                           Source="exoplanet_banner_1.gif"/>
                 </Grid>
             </RelativeLayout>
             <StackLayout Padding="20" x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" >

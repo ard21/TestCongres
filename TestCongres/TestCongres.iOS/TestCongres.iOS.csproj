@@ -86,13 +86,17 @@
     </BundleResource>
     <BundleResource Include="Resources\CODE39S.TTF" />
     <BundleResource Include="Resources\Butler_Black.otf" />
-    <BundleResource Include="Resources\Butler_Bold.otf" />
+    <BundleResource Include="Resources\Butler_Bold.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
     <BundleResource Include="Resources\Butler_ExtraBold.otf" />
     <BundleResource Include="Resources\Butler_Light.otf" />
     <BundleResource Include="Resources\Butler_Medium.otf" />
     <BundleResource Include="Resources\Butler_Regular.otf" />
     <BundleResource Include="Resources\Butler_Ultra_Light.otf" />
-    <BundleResource Include="Resources\Roboto-Black.ttf" />
+    <BundleResource Include="Resources\Roboto-Black.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
     <BundleResource Include="Resources\Roboto-BlackItalic.ttf" />
     <BundleResource Include="Resources\Roboto-Bold.ttf" />
     <BundleResource Include="Resources\Roboto-BoldItalic.ttf" />
