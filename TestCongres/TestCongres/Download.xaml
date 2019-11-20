@@ -7,7 +7,6 @@
              x:Class="TestCongres.Download">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Retour page principale" Clicked="btnBack"/>
             <ListView ItemsSource="{Binding Fichiers}"
                   HasUnevenRows="true"
                   ItemSelected="OnListViewItemSelected"

@@ -66,5 +66,10 @@ namespace TestCongres
         {
             await Navigation.PushModalAsync(new MyAgenda(), false);
         }
+
+        async private void btnProfil(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MyProfile(), false);
+        }
     }
 }

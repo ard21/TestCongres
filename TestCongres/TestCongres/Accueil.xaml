@@ -14,19 +14,6 @@
                     MinimumHeightRequest="300"
                        RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
-                <StackLayout Padding="20,20">
-                    <Frame CornerRadius="25" 
-                        HeightRequest="50"
-                           WidthRequest="50"
-                           HorizontalOptions="Start"
-                           Padding="0"
-                           IsClippedToBounds="True">
-                        <Image Source="Hélène TREMBLAY.png" 
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
-                    </Frame>
-                    <Label Text="Aujourd'hui" FontFamily="Butler_Bold" HorizontalOptions="Start" TextColor="White" FontSize="28"/>
-                </StackLayout>
                 <Grid Padding="50,170">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -65,15 +52,31 @@
                                     Pressed="btnMapsClicked"/>
                     <Label Grid.Row="3"
                                    Grid.Column="2"
-                                   Text="Fichiers"
+                                   Text="Exposants"
                                    FontAttributes="Bold" />
                     <ImageButton Grid.Row="4"
                                     Grid.Column="2"
                                     HeightRequest="90"
                                     WidthRequest="90"
-                                    Source="btn_Downloads.png" 
-                                    Pressed="btnDownloadClicked"/>
+                                    Source="btn_Exposants.png" 
+                                    Pressed="btnExposantClicked"/>
                 </Grid>
+                <StackLayout Padding="20,20">
+                    <Frame CornerRadius="25" 
+                        HeightRequest="50"
+                           WidthRequest="50"
+                           HorizontalOptions="Start"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="Hélène TREMBLAY.png" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    </Frame>
+                    <Label Text="Aujourd'hui" FontFamily="Butler_Bold" HorizontalOptions="Start" TextColor="White" FontSize="28"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="btnProfil"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
             </RelativeLayout>
             <StackLayout Padding="20" x:Name="StackBarCode" IsVisible="False" HorizontalOptions="Center" >
                 <Image Source="logo-chambre-des-notaires.png"/>

@@ -335,12 +335,6 @@
     <BundleResource Include="Resources\back_popup_Card%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\background_generic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\background_generic%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\btn_Downloads.png" />
   </ItemGroup>
   <ItemGroup>
@@ -447,5 +441,14 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\back_body%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_ExamOFF.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background_generic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background_generic%402x.png" />
   </ItemGroup>
 </Project>

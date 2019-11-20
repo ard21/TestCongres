@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-800,-209)">
+        <g transform="matrix(0.670709,0,0,1.09046,512,-4457.44)">
+            <g transform="matrix(1.21403,0,0,0.746714,-4313.17,1777.29)">
+                <g id="icon_ExamOFF">
+                    <path id="icon_ExamON" d="M3967,3375.5C3967,3369.98 3962.52,3365.5 3957,3365.5L3937,3365.5C3931.48,3365.5 3927,3369.98 3927,3375.5L3927,3403.95C3927,3409.47 3931.48,3413.95 3937,3413.95L3957,3413.95C3962.52,3413.95 3967,3409.47 3967,3403.95L3967,3375.5Z" style="fill:rgb(224,224,224);"/>
+                    <clipPath id="_clip1">
+                        <path id="icon_ExamON1" serif:id="icon_ExamON" d="M3967,3375.5C3967,3369.98 3962.52,3365.5 3957,3365.5L3937,3365.5C3931.48,3365.5 3927,3369.98 3927,3375.5L3927,3403.95C3927,3409.47 3931.48,3413.95 3937,3413.95L3957,3413.95C3962.52,3413.95 3967,3409.47 3967,3403.95L3967,3375.5Z"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip1)">
+                        <g transform="matrix(1.15694,0,0,1,-621.178,-4.79108)">
+                            <path d="M3939,3381.5L3957,3381.5" style="fill:none;stroke:white;stroke-width:2.27px;"/>
+                        </g>
+                        <g transform="matrix(1.15694,0,0,1,-621.178,1.75192)">
+                            <path d="M3939,3381.5L3957,3381.5" style="fill:none;stroke:white;stroke-width:2.27px;"/>
+                        </g>
+                        <g transform="matrix(0.731951,0,0,0.572831,1052.84,1452.7)">
+                            <path d="M3939,3381.5L3957,3381.5" style="fill:none;stroke:white;stroke-width:3.74px;"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
