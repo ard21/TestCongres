@@ -7,40 +7,61 @@
              BackgroundImageSource="background_generic.png"
              x:Class="TestCongres.MyProfile">
     <ContentPage.Content>
-        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <ImageButton Grid.Row="0"
-                            Padding="0,20,10,0"
-                            Grid.Column="2"
-                            Source="icon_HomeON.png"
-                            HorizontalOptions="End"
-                            Pressed="btnBack"/>
-            <Label Grid.Row="1"
-                    Grid.Column="1"
-                    Text="Bonjour,"
-                    FontSize="Default"
-                    TextColor="Gray"/>
-            <Label Grid.Row="1"
-                    Grid.Column="1"
-                    Padding="10,20"
+        <RelativeLayout>
+            <ImageButton HorizontalOptions="End"
+                    Source="icon_HomeON.png"
+                    Pressed="btnBack"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Constant=-40}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=20}"/>
+            <Label Text="Bonjour,"
+                   FontSize="Default"
+                   TextColor="Gray" 
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Factor=0.5,
+                                                                      Constant=-75}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Height, 
+                                                                      Factor=0.35, 
+                                                                      Constant=-10}"/>
+
+            <Label Padding="10,20"
                     Text="Catherine"
                     FontSize="Large"
                     TextColor="White"
-                    FontAttributes="Bold"/>
-            <Label Grid.Row="2"
-                    Grid.Column="1"
-                    Text="Choisissez votre congrès"
+                    FontAttributes="Bold"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Factor=0.5,
+                                                                      Constant=-60}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Height, 
+                                                                      Factor=0.35, 
+                                                                      Constant=0}"/>
+            <Label Text="Choisissez votre congrès"
                     FontSize="Default"
-                    TextColor="White"/>
-        </Grid>
+                    TextColor="White"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Factor=0.5,
+                                                                      Constant=-70}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Height, 
+                                                                      Factor=0.6, 
+                                                                      Constant=0}"/>
+            <ImageButton Source="congres_1.png"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Factor=0.5,
+                                                                      Constant=-90}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Height, 
+                                                                      Factor=0.65, 
+                                                                      Constant=0}"/>
+
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

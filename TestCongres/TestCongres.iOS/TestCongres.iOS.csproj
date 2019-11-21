@@ -451,4 +451,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\background_generic%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\congres_1.png" />
+  </ItemGroup>
 </Project>

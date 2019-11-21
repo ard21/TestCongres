@@ -4,11 +4,33 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundColor="#34374E"
              x:Class="TestCongres.Maps">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Retour page principale" Clicked="btnBack"/>
-            <Image Source="mapsCNQ.png"></Image>
+        <StackLayout Padding="0,20">
+            <RelativeLayout>
+                <ImageButton HorizontalOptions="End"
+                    Source="icon_HomeON.png"
+                    Pressed="btnBack"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Constant=-40}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=0}"/>
+                <Label Text="Plan du site"
+                   FontSize="Large"
+                   FontFamily="Butler_Bold"
+                   TextColor="Gray" 
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Factor=0.5,
+                                                                      Constant=-50}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=0}"/>
+            </RelativeLayout>
+            <StackLayout>
+                <Image Source="mapsCNQ.png" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
