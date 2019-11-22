@@ -34,8 +34,8 @@
                                    FontAttributes="Bold" />
                     <ImageButton Grid.Row="1"
                                     Grid.Column="0"
-                                    HeightRequest="180"
-                                    WidthRequest="180"
+                                    HeightRequest="175"
+                                    WidthRequest="175"
                                     Source="btn_Horaire.png"
                                     Grid.ColumnSpan="3"
                                     HorizontalOptions="StartAndExpand"

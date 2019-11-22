@@ -6,48 +6,75 @@
              mc:Ignorable="d"
              x:Class="TestCongres.Agenda">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Retour page principale" Clicked="btnRetourClicked"/>
-            <ListView ItemsSource="{Binding Calendriers}"
+        <RelativeLayout BackgroundColor="#F0F0F0">
+            <Image x:Name="back_header"
+                   Source="back_header_Menu.png"
+                    MinimumHeightRequest="300"
+                       RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+            <ImageButton Source="back_bouton_tab.png"
+                    Pressed="btnHoraire"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Height,Factor=.04,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,Factor=.5,Constant=-112}"/>
+            <ImageButton Source="back_bouton_tab.png"
+                    Pressed="btnConferencier"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Height,Factor=.04,Constant=0}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                        Property=Width,Factor=.5,Constant=10}"/>
+            <ImageButton HorizontalOptions="End"
+                    Source="icon_HomeON.png"
+                    Pressed="btnBack"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Constant=-40}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=20}"/>
+            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                         ElementName=back_header,Property=Y,Factor=1,Constant=158}">
+                <ListView ItemsSource="{Binding Calendriers}"
                   HasUnevenRows="true"
                   ItemSelected="OnListViewItemSelected"
                   ItemTapped="OnListViewItemTapped">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Padding="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="30" />
-                                </Grid.ColumnDefinitions>
-                                <Image Grid.RowSpan="2"
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="30" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.RowSpan="2"
                                    Source="{Binding ImageUrl}"
                                    Aspect="AspectFill"
                                    HeightRequest="60"
                                    WidthRequest="60" />
-                                <Label Grid.Row="0"
+                                    <Label Grid.Row="0"
                                    Grid.Column="1"
                                    Text="{Binding Name}"
                                    FontAttributes="Bold" />
-                                <ImageButton Grid.Row="0"
+                                    <ImageButton Grid.Row="0"
                                     Grid.Column="2"
                                     HeightRequest="15"
                                     WidthRequest="15"
                                     Source="icon_FavOFF.png" 
                                      Pressed="btnFavoris"/>
-                                <Label Grid.Row="1"
+                                    <Label Grid.Row="1"
                                    Grid.Column="1"
                                    Text="{Binding Location}"/>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -134,26 +134,38 @@ namespace TestCongres
             });
             BindingContext = this;
         }
-        void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Calendrier selectedItem = e.SelectedItem as Calendrier;
 
-            string str = "La conférence choisie est " + selectedItem.Name;
-            DisplayAlert("Sélection des conférences", str, "OK");
+            //string str = "La conférence choisie est " + selectedItem.Name;
+            //DisplayAlert("Sélection des conférences", str, "OK");
+            await Navigation.PushModalAsync(new ExposantDetail(), false);
         }
 
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
         {
             Calendrier tappedItem = e.Item as Calendrier;
         }
-        async private void btnRetourClicked(object sender, EventArgs e)
+        private void btnFavoris(object sender, EventArgs e)
+        {
+            DisplayAlert("Favoris", "Ajout de favoris", "OK");
+        }
+
+        async private void btnBack(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
         }
 
-        private void btnFavoris(object sender, EventArgs e)
+        private void btnHoraire(object sender, EventArgs e)
         {
-            DisplayAlert("Favoris", "Ajout de favoris", "OK");
+            DisplayAlert("Horaire", "Horaire", "OK");
+        }
+
+        private void btnConferencier(object sender, EventArgs e)
+
+        {
+            DisplayAlert("Horaire", "Conférencier", "OK");
         }
     }
 }
