@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System;
 
 namespace TestCongres
 {
@@ -10,6 +11,10 @@ namespace TestCongres
         public Participants()
         {
             InitializeComponent();
+        }
+        async private void btnBack(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }

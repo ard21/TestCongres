@@ -7,9 +7,7 @@
              x:Class="TestCongres.Favoris">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Page de favoris"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" Source="https://secure.innovision.qc.ca/demo/Images/Compteurs-BVO.pdf" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

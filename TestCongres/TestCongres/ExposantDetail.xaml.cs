@@ -17,5 +17,14 @@ namespace TestCongres
         {
             await Navigation.PushModalAsync(new Maps(), false);
         }
+        async private void btnBack(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+        private void btnFavoris(object sender, EventArgs e)
+        {
+            DisplayAlert("Favoris", "Ajout de favoris", "OK");
+        }
+
     }
 }
