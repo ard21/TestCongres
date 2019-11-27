@@ -11,5 +11,16 @@ namespace TestCongres
         {
             InitializeComponent();
         }
+
+        private void btnFermerStack(object sender, System.EventArgs e)
+        {
+            stackWeb.IsVisible = false;
+        }
+
+        private void btnOuvrirWeb(object sender, System.EventArgs e)
+        {
+            stackWeb.IsVisible = true;
+
+        }
     }
 }

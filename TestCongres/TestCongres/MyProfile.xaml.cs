@@ -21,5 +21,10 @@ namespace TestCongres
         {
             await Navigation.PopModalAsync();
         }
+
+        private void swap_GaucheDroite(object sender, ScrolledEventArgs e)
+        {
+            
+        }
     }
 }

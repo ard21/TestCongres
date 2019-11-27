@@ -12,13 +12,21 @@
                     MinimumHeightRequest="300"
                        RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
-            <ImageButton Source="back_bouton_tab.png"
+            <Button Text="Horaire"
+                    TextColor="White"
+                    CornerRadius="20"
+                    WidthRequest="102"
+                    BackgroundColor="#7A7F9D"
                     Pressed="btnHoraire"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Height,Factor=.04,Constant=0}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,Factor=.5,Constant=-112}"/>
-            <ImageButton Source="back_bouton_tab.png"
+            <Button Text="Conférencier"
+                    TextColor="White"
+                    WidthRequest="102"
+                    CornerRadius="20"
+                    BackgroundColor="#7A7F9D"
                     Pressed="btnConferencier"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Height,Factor=.04,Constant=0}"

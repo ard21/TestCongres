@@ -7,7 +7,13 @@
              x:Class="TestCongres.Favoris">
     <ContentPage.Content>
         <StackLayout>
-            <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" Source="https://secure.innovision.qc.ca/demo/Images/Compteurs-BVO.pdf" />
+            <Button Text="Ouvrir fichier" Clicked="btnOuvrirWeb"/>
+            <StackLayout Orientation="Vertical"
+                         x:Name="stackWeb"
+                         IsVisible="False">
+                <Button Text="Fermer" Clicked="btnFermerStack"/>
+                <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" Source="https://secure.innovision.qc.ca/demo/Images/Compteurs-BVO.pdf"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
