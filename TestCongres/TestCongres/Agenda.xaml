@@ -22,7 +22,7 @@
                         Property=Height,Factor=.04,Constant=0}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                         Property=Width,Factor=.5,Constant=-112}"/>
-            <Button Text="Conférencier"
+            <Button Text="Conférenciers"
                     TextColor="White"
                     WidthRequest="102"
                     CornerRadius="20"
@@ -40,8 +40,13 @@
                                                                       Constant=-40}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                       Constant=20}"/>
-            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
-                         ElementName=back_header,Property=Y,Factor=1,Constant=158}">
+            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
+                            Type=RelativeToView,
+                            ElementName=back_header,
+                            Property=Y,
+                            Factor=1,
+                            Constant=150}"
+                         Padding="10,10,10,10">
                 <ListView ItemsSource="{Binding Calendriers}"
                   HasUnevenRows="true"
                   ItemSelected="OnListViewItemSelected"
@@ -49,34 +54,45 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid Padding="10">
+                                <Grid BackgroundColor="#F0F0F0" Padding="5,5,5,5">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="30" />
+                                        <ColumnDefinition Width="0.33*" />
+                                        <ColumnDefinition Width="0.33*"/>
+                                        <ColumnDefinition Width="0.33*" />
                                     </Grid.ColumnDefinitions>
-                                    <Image Grid.RowSpan="2"
-                                   Source="{Binding ImageUrl}"
-                                   Aspect="AspectFill"
-                                   HeightRequest="60"
-                                   WidthRequest="60" />
-                                    <Label Grid.Row="0"
-                                   Grid.Column="1"
-                                   Text="{Binding Name}"
-                                   FontAttributes="Bold" />
-                                    <ImageButton Grid.Row="0"
-                                    Grid.Column="2"
-                                    HeightRequest="15"
-                                    WidthRequest="15"
-                                    Source="icon_FavOFF.png" 
-                                     Pressed="btnFavoris"/>
-                                    <Label Grid.Row="1"
-                                   Grid.Column="1"
-                                   Text="{Binding Location}"/>
+                                    <Frame CornerRadius="20"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Margin="0,0,0,0"
+                                           WidthRequest="50"
+                                           HeightRequest="50"
+                                           VerticalOptions="FillAndExpand"
+                                           HorizontalOptions="FillAndExpand">
+                                        <Image Source="{Binding ImageUrl}"/>
+                                    </Frame>
+                                    <Label Text="{Binding Name}"
+                                           Grid.Row="0"
+                                           Grid.Column="1"
+                                           FontAttributes="Bold" />
+                                    <StackLayout Orientation="Vertical"
+                                                 Grid.Row="0"
+                                                 Grid.Column="2">
+                                        <ImageButton Source="icon_FavOFF.png" 
+                                                     Pressed="btnFavoris"/>
+                                        <Image Source="icon_heure.png"/>
+                                        <Label HorizontalTextAlignment="End"
+                                               TextColor="#FFB53F"
+                                               FontSize="Small"
+                                               Text="{Binding Location}"/>
+                                        <Image Source="icon_lieu.png"/>
+                                        <Label HorizontalTextAlignment="End"
+                                               TextColor="#FFB53F"
+                                               FontSize="Small"
+                                               Text="{Binding Hour}"/>
+                                    </StackLayout>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

@@ -8,6 +8,7 @@ namespace TestCongres
     {
         public string Name { get; set; }
         public string Location { get; set; }
+        public string Hour { get; set; }
         public string ImageUrl { get; set; }
 
         public override string ToString()
