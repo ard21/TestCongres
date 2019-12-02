@@ -72,7 +72,7 @@
                                  BackgroundColor="White"
                                  CornerRadius="20"
                                  HeightRequest="50"/>
-                    <ImageButton Source="congres_1.png"
+                    <ImageButton Source="congres_3.png"
                                  BackgroundColor="White"
                                  CornerRadius="20"
                                  HeightRequest="50"/>

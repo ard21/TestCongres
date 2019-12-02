@@ -40,7 +40,9 @@
                                                                       Constant=-40}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                       Constant=20}"/>
-            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
+            <StackLayout Padding="10,10,20,10"
+                         BackgroundColor="#F0F0F0"
+                         RelativeLayout.YConstraint="{ConstraintExpression 
                             Type=RelativeToView,
                             ElementName=back_header,
                             Property=Y,
@@ -48,70 +50,77 @@
                             Constant=150}">
                 <ListView ItemsSource="{Binding Calendriers}"
                   HasUnevenRows="true"
+                  SeparatorVisibility="None"
                   ItemSelected="OnListViewItemSelected"
                   ItemTapped="OnListViewItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid BackgroundColor="#F0F0F0" Padding="5,5,5,5">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0.20*" />
-                                        <ColumnDefinition Width="0.40*"/>
-                                        <ColumnDefinition Width="0.40*" />
-                                    </Grid.ColumnDefinitions>
-                                    <Frame CornerRadius="20"
-                                           Grid.Row="0"
-                                           Grid.Column="0"
-                                           Margin="0,0,0,0"
-                                           WidthRequest="50"
-                                           HeightRequest="50"
-                                           VerticalOptions="FillAndExpand"
-                                           HorizontalOptions="FillAndExpand">
-                                        <Image Source="{Binding ImageUrl}"/>
-                                    </Frame>
-                                    <Label Text="{Binding Name}"
-                                           Grid.Row="0"
-                                           Grid.Column="1"
-                                           FontAttributes="Bold" />
-                                    <Grid Grid.Row="0"
-                                          Grid.Column="2">
+                                <Frame BackgroundColor="#FFFFFF"
+                                       CornerRadius="20"
+                                       Padding="10,10,10,10"
+                                       Margin="0,5,0,5"
+                                       HasShadow="False">
+                                    <Grid>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="0.10*" />
-                                            <ColumnDefinition Width="0.90*"/>
+                                            <ColumnDefinition Width="0.20*" />
+                                            <ColumnDefinition Width="0.40*"/>
+                                            <ColumnDefinition Width="0.40*" />
                                         </Grid.ColumnDefinitions>
-                                        <ImageButton Grid.Row="0"
+                                        <Frame CornerRadius="20"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           HasShadow="False"
+                                           Margin="0,0,0,0">
+                                            <Image Source="{Binding ImageUrl}"
+                                               Aspect="AspectFit"
+                                               HorizontalOptions="FillAndExpand"
+                                               VerticalOptions="FillAndExpand"/>
+                                        </Frame>
+                                        <Label Text="{Binding Name}"
+                                           Grid.Row="0"
+                                           Grid.Column="1"
+                                           FontAttributes="Bold" />
+                                        <Grid Grid.Row="0"
+                                          Grid.Column="2">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.10*" />
+                                                <ColumnDefinition Width="0.90*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <ImageButton Grid.Row="0"
                                                      Grid.ColumnSpan="2"
                                                      HorizontalOptions="End"
                                                      Source="icon_FavOFF.png" 
                                                      Pressed="btnFavoris"/>
-                                        <StackLayout Grid.Row="1"
+                                            <StackLayout Grid.Row="1"
                                                      Grid.Column="1"
                                                      Orientation="Horizontal"
                                                      HorizontalOptions="End">
-                                            <Image Source="icon_lieu.png"/>
-                                            <Label TextColor="#FFB53F"
+                                                <Image Source="icon_lieu.png"/>
+                                                <Label TextColor="#FFB53F"
                                                    FontSize="Small"
                                                    Text="{Binding Location}"/>
-                                        </StackLayout>
-                                        <StackLayout Grid.Row="2"
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="2"
                                                      Grid.Column="1"
                                                      Orientation="Horizontal"
                                                      HorizontalOptions="End">
-                                            <Image Source="icon_heure.png"/>
-                                            <Label TextColor="#FFB53F"
+                                                <Image Source="icon_heure.png"/>
+                                                <Label TextColor="#FFB53F"
                                                    FontSize="Small"
                                                    Text="{Binding Hour}"/>
-                                        </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
+                                </Frame>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
