@@ -40,28 +40,28 @@
                                                                       Constant=-40}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                       Constant=20}"/>
-            <StackLayout Padding="10,10,20,10"
-                         BackgroundColor="#F0F0F0"
-                         RelativeLayout.YConstraint="{ConstraintExpression 
+            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
                             Type=RelativeToView,
                             ElementName=back_header,
                             Property=Y,
                             Factor=1,
                             Constant=150}">
                 <ListView ItemsSource="{Binding Calendriers}"
-                  HasUnevenRows="true"
+                  HasUnevenRows="True"
+                          Margin="0,0,15,0"
+                          BackgroundColor="Green"
                   SeparatorVisibility="None"
                   ItemSelected="OnListViewItemSelected"
                   ItemTapped="OnListViewItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame BackgroundColor="#FFFFFF"
+                                <Frame BackgroundColor="Yellow"
                                        CornerRadius="20"
-                                       Padding="10,10,10,10"
-                                       Margin="0,5,0,5"
-                                       HasShadow="False">
-                                    <Grid>
+                                       BorderColor="Red" 
+                                       Margin="15"
+                                       HasShadow="True">
+                                    <Grid Margin="0,0,0,1">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
@@ -72,9 +72,9 @@
                                         </Grid.ColumnDefinitions>
                                         <Frame CornerRadius="20"
                                            Grid.Row="0"
+                                               BackgroundColor="Black"
                                            Grid.Column="0"
-                                           HasShadow="False"
-                                           Margin="0,0,0,0">
+                                           HasShadow="True">
                                             <Image Source="{Binding ImageUrl}"
                                                Aspect="AspectFit"
                                                HorizontalOptions="FillAndExpand"
