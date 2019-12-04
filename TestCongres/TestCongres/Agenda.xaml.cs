@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,12 +9,21 @@ namespace TestCongres
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Agenda : ContentPage
     {
-        public IList<Calendrier> Calendriers { get; private set; }
+        private bool flagHoraireConferencier;
+
+        public ObservableCollection<Calendrier> Calendriers { get; private set; }
 
         public Agenda()
         {
             InitializeComponent();
-            Calendriers = new List<Calendrier>();
+
+            flagHoraireConferencier = true;
+            //Calendriers = new List<Calendrier>();
+            Calendriers = new ObservableCollection<Calendrier>();
+            horaire();
+        }
+        private void horaire ()
+        {
             Calendriers.Add(new Calendrier
             {
                 Name = "Plus 1 – Rédaction des ﬁducies de gel",
@@ -150,7 +160,21 @@ namespace TestCongres
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Gelada-Pavian.jpg/320px-Gelada-Pavian.jpg"
             });
             BindingContext = this;
+
         }
+        private void conferencier()
+        {
+            Calendriers.Add(new Calendrier
+            {
+                Name = "Alain  Robillard",
+                Location = "**Appel au calme**",
+                ImageUrl = "Alain DÉCOSTE.png"
+            });
+
+            BindingContext = this;
+
+        }
+
         async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Calendrier selectedItem = e.SelectedItem as Calendrier;
@@ -176,13 +200,28 @@ namespace TestCongres
 
         private void btnHoraire(object sender, EventArgs e)
         {
-            DisplayAlert("Horaire", "Horaire", "OK");
+            if (flagHoraireConferencier == false) {
+                flagHoraireConferencier = true;
+                if (Calendriers.Count > 0)
+                {
+                    Calendriers.Clear();
+                }
+                horaire();
+            }
         }
 
         private void btnConferencier(object sender, EventArgs e)
 
         {
-            DisplayAlert("Horaire", "Conférencier", "OK");
+            if (flagHoraireConferencier == true)
+            {
+                flagHoraireConferencier = false;
+                if (Calendriers.Count > 0)
+                {
+                    Calendriers.Clear();
+                }
+                conferencier();
+            }
         }
     }
 }

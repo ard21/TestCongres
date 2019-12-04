@@ -49,36 +49,32 @@
                 <ListView ItemsSource="{Binding Calendriers}"
                   HasUnevenRows="True"
                           Margin="0,0,15,0"
-                          BackgroundColor="Green"
+                          BackgroundColor="#F0F0F0"
                   SeparatorVisibility="None"
                   ItemSelected="OnListViewItemSelected"
                   ItemTapped="OnListViewItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame BackgroundColor="Yellow"
+                                <Frame BackgroundColor="#FFFFFF"
                                        CornerRadius="20"
-                                       BorderColor="Red" 
-                                       Margin="15"
-                                       HasShadow="True">
+                                       BorderColor="#FFFFFF" 
+                                       Margin="10"
+                                       HasShadow="False">
                                     <Grid Margin="0,0,0,1">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="0.20*" />
+                                            <ColumnDefinition Width="0.25*" />
                                             <ColumnDefinition Width="0.40*"/>
-                                            <ColumnDefinition Width="0.40*" />
+                                            <ColumnDefinition Width="0.35*" />
                                         </Grid.ColumnDefinitions>
                                         <Frame CornerRadius="20"
                                            Grid.Row="0"
-                                               BackgroundColor="Black"
+                                           BackgroundColor="#FFFFFF"
                                            Grid.Column="0"
                                            HasShadow="True">
-                                            <Image Source="{Binding ImageUrl}"
-                                               Aspect="AspectFit"
-                                               HorizontalOptions="FillAndExpand"
-                                               VerticalOptions="FillAndExpand"/>
                                         </Frame>
                                         <Label Text="{Binding Name}"
                                            Grid.Row="0"
