@@ -181,7 +181,7 @@ namespace TestCongres
 
             //string str = "La conférence choisie est " + selectedItem.Name;
             //DisplayAlert("Sélection des conférences", str, "OK");
-            await Navigation.PushModalAsync(new ExposantDetail(), false);
+            await Navigation.PushModalAsync(new Atelier(), false);
         }
 
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
