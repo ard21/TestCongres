@@ -27,18 +27,20 @@
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=icon_Home, 
                                                                       Property=Y,Factor=1,Constant=40}"/>
-            <Label Text="Protection et sécurité de l'information"
-                   x:Name="cours" 
-                   FontSize="Large"
-                   FontAttributes="Bold"
-                   FontFamily="Butler_Bold.otf"
-                   TextColor="White" 
-                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                <Label RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
                                                                       Factor=0,
                                                                       Constant=0}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=25}"/>
+                                                                      Constant=25}"
+                   Text="Protection et sécurité de l'information"
+                   x:Name="cours" 
+                   LineBreakMode="WordWrap"
+                   MaxLines="2"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   FontFamily="Butler_Bold.otf"
+                   TextColor="White"/>
             <Grid RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=cours, 
                                                                       Property=Y,Factor=1,Constant=400}">
@@ -47,9 +49,9 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.10*" />
-                <ColumnDefinition Width="0.20*"/>
-                <ColumnDefinition Width="0.10*" />
-                <ColumnDefinition Width="0.20*"/>
+                    <ColumnDefinition Width="0.20*"/>
+                    <ColumnDefinition Width="0.10*" />
+                    <ColumnDefinition Width="0.20*"/>
                 </Grid.ColumnDefinitions>
                 <Image Grid.Row="0"
                     Grid.Column="0"
@@ -71,13 +73,13 @@
               <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
                      LineBreakMode="WordWrap"
                      MaxLines="10"
-                     Padding="0,50,0,0"
-                     FontSize="Large"
+                     Padding="20,0,20,0"
+                     FontSize="Medium"
                      FontAttributes="Bold"
                      FontFamily="Butler_Bold.otf"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=backImage, 
-                                                                      Property=Y,Factor=1,Constant=40}"
+                                                                      Property=Y,Factor=3,Constant=200}"
                      TextColor="Black"/>
         </RelativeLayout>
     </StackLayout>
