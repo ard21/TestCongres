@@ -27,7 +27,7 @@
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=icon_Home, 
                                                                       Property=Y,Factor=1,Constant=40}"/>
-                <Label RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+            <Label RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
                                                                       Factor=0,
                                                                       Constant=0}"
@@ -35,15 +35,16 @@
                                                                       Constant=25}"
                    Text="Protection et sécurité de l'information"
                    x:Name="cours" 
+                   Padding="5,0,50,0"
                    LineBreakMode="WordWrap"
-                   MaxLines="2"
-                   FontSize="Large"
+                   MaxLines="3"
+                   FontSize="Medium"
                    FontAttributes="Bold"
                    FontFamily="Butler_Bold.otf"
                    TextColor="White"/>
             <Grid RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=cours, 
-                                                                      Property=Y,Factor=1,Constant=400}">
+                                                                      Property=Y,Factor=1,Constant=50}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
@@ -70,17 +71,19 @@
                      FontSize="Small"
                      Text="9 h 30"/>
              </Grid>
-              <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
-                     LineBreakMode="WordWrap"
-                     MaxLines="10"
-                     Padding="20,0,20,0"
-                     FontSize="Medium"
-                     FontAttributes="Bold"
-                     FontFamily="Butler_Bold.otf"
-                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
-                                                                      ElementName=backImage, 
-                                                                      Property=Y,Factor=3,Constant=200}"
-                     TextColor="Black"/>
+            <ScrollView Orientation="Vertical" 
+                        x:Name="stackSwap"
+                        Padding="20,0,20,0"
+                        HeightRequest="15000"
+                        HorizontalOptions="Start"
+                        Scrolled="swap_HautBas"
+                        VerticalScrollBarVisibility="Default"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
+                                                                      ElementName=cours, 
+                                                                      Property=Y,Factor=1,Constant=200}">
+                <WebView x:Name="leTexte">
+                </WebView>
+            </ScrollView>
         </RelativeLayout>
     </StackLayout>
 </ContentPage>
