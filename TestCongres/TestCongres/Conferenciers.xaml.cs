@@ -1,74 +1,42 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TestCongres
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)] 
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Conferenciers : ContentPage
     {
-        private ObservableCollection<ConferencierGroup> _allGroups;
-        private ObservableCollection<ConferencierGroup> _expandedGroups;
-
-        public Conferenciers()
+        public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
+        public Conferenciers ()
         {
             InitializeComponent();
-            _allGroups = ConferencierGroup.All;
-            UpdateListContent();
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+            wvTexte.WidthRequest = mainDisplayInfo.Width - 400;
         }
 
-        private void HeaderTapped(object sender, EventArgs args)
-        {
-            int selectedIndex = _expandedGroups.IndexOf(
-                ((ConferencierGroup)((Button)sender).CommandParameter));
-            _allGroups[selectedIndex].Expanded = !_allGroups[selectedIndex].Expanded;
-            UpdateListContent();
-        }
-
-        private void UpdateListContent()
-        {
-            _expandedGroups = new ObservableCollection<ConferencierGroup>();
-            foreach (ConferencierGroup group in _allGroups)
-            {
-                ConferencierGroup newGroup = new ConferencierGroup(group.Categorie, group.TitreSommaire, group.Expanded);
-                newGroup.CategorieDecompte = group.Count;
-                if (group.Expanded)
-                {
-                    foreach (Conferencier gars in group)
-                    {
-                        newGroup.Add(gars);
-                    }
-                }
-                _expandedGroups.Add(newGroup);
-            }
-            GroupedView.ItemsSource = _expandedGroups;
-        }
-
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            if (e.Item == null)
-                return;
-
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
-        }
-
-        private void searchDone(object sender, TextChangedEventArgs e)
-        {
-            //GroupedView.ItemsSource = RempliTableExposants(e.NewTextValue);
-
-        }
-
-        async private void btnMenuClicked(object sender, EventArgs e)
+        async private void btnBack(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+        }
+        private void btnFavoris(object sender, EventArgs e)
+        {
+            DisplayAlert("Favoris", "Ajout de favoris", "OK");
+        }
+
+        private void swap_HautBas(object sender, ScrolledEventArgs e)
+        {
+
+        }
+        async private void btnAtelier(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Atelier(), false);
         }
     }
 }

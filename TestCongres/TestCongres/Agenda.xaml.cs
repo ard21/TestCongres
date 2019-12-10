@@ -181,7 +181,14 @@ namespace TestCongres
 
             //string str = "La conférence choisie est " + selectedItem.Name;
             //DisplayAlert("Sélection des conférences", str, "OK");
-            await Navigation.PushModalAsync(new Atelier(), false);
+            if (flagHoraireConferencier == true)
+            {
+                await Navigation.PushModalAsync(new Atelier(), false);
+            }
+            else
+            {
+                await Navigation.PushModalAsync(new Conferenciers(), false);
+            }
         }
 
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
