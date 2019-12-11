@@ -20,10 +20,15 @@ namespace TestCongres
             flagHoraireConferencier = true;
             //Calendriers = new List<Calendrier>();
             Calendriers = new ObservableCollection<Calendrier>();
+            lvHoraire.IsVisible = true;
+            lvConferenciers.IsVisible = false;
             horaire();
         }
         private void horaire ()
         {
+            lvHoraire.IsVisible = true;
+            lvConferenciers.IsVisible = false;
+
             Calendriers.Add(new Calendrier
             {
                 Name = "Plus 1 – Rédaction des ﬁducies de gel",
@@ -164,11 +169,21 @@ namespace TestCongres
         }
         private void conferencier()
         {
+            lvHoraire.IsVisible = false;
+            lvConferenciers.IsVisible = true;
+
             Calendriers.Add(new Calendrier
             {
                 Name = "Alain  Robillard",
-                Location = "**Appel au calme**",
+                Location = "Expert conseil",
                 ImageUrl = "Alain DÉCOSTE.png"
+            });
+
+            Calendriers.Add(new Calendrier
+            {
+                Name = "Karine Paquet",
+                Location = "Chargée de projets",
+                ImageUrl = "Josée NÉRON.png"
             });
 
             BindingContext = this;

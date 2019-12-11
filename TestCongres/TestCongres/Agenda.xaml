@@ -47,12 +47,14 @@
                             Factor=1,
                             Constant=150}">
                 <ListView ItemsSource="{Binding Calendriers}"
-                  HasUnevenRows="True"
+                          IsVisible="True"
+                          x:Name="lvHoraire"
+                          HasUnevenRows="True"
                           Margin="0,0,15,0"
                           BackgroundColor="#F0F0F0"
-                  SeparatorVisibility="None"
-                  ItemSelected="OnListViewItemSelected"
-                  ItemTapped="OnListViewItemTapped">
+                          SeparatorVisibility="None"
+                          ItemSelected="OnListViewItemSelected"
+                          ItemTapped="OnListViewItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -66,55 +68,106 @@
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="0.25*" />
-                                            <ColumnDefinition Width="0.40*"/>
+                                            <ColumnDefinition Width="0.65*" />
                                             <ColumnDefinition Width="0.35*" />
                                         </Grid.ColumnDefinitions>
-                                        <Frame CornerRadius="20"
-                                           Grid.Row="0"
-                                           BackgroundColor="#FFFFFF"
-                                           Grid.Column="0"
-                                           HasShadow="True">
-                                        </Frame>
                                         <Label Text="{Binding Name}"
                                            Grid.Row="0"
-                                           Grid.Column="1"
+                                           Grid.Column="0"
                                            FontAttributes="Bold" />
-                                        <Grid Grid.Row="0"
-                                          Grid.Column="2">
+                                        <Grid HorizontalOptions="End"
+                                              Grid.Row="0"
+                                              Grid.Column="1">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto" />
                                                 <RowDefinition Height="Auto" />
                                                 <RowDefinition Height="Auto" />
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="0.10*" />
-                                                <ColumnDefinition Width="0.90*"/>
+                                                <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
                                             <ImageButton Grid.Row="0"
-                                                     Grid.ColumnSpan="2"
-                                                     HorizontalOptions="End"
-                                                     Source="icon_FavOFF.png" 
-                                                     Pressed="btnFavoris"/>
+                                                         Grid.Column="0"
+                                                         HorizontalOptions="End"
+                                                         Source="icon_FavOFF.png" 
+                                                         Pressed="btnFavoris"/>
                                             <StackLayout Grid.Row="1"
-                                                     Grid.Column="1"
-                                                     Orientation="Horizontal"
-                                                     HorizontalOptions="End">
-                                                <Image Source="icon_lieu.png"/>
-                                                <Label TextColor="#FFB53F"
-                                                   FontSize="Small"
-                                                   Text="{Binding Location}"/>
+                                                         Grid.Column="0"
+                                                         Orientation="Horizontal"
+                                                         HorizontalOptions="End">
+                                                            <Image Source="icon_lieu.png"/>
+                                                            <Label TextColor="#FFB53F"
+                                                                   FontSize="Small"
+                                                                   Text="{Binding Location}"/>
                                             </StackLayout>
                                             <StackLayout Grid.Row="2"
-                                                     Grid.Column="1"
-                                                     Orientation="Horizontal"
-                                                     HorizontalOptions="End">
-                                                <Image Source="icon_heure.png"/>
-                                                <Label TextColor="#FFB53F"
-                                                   FontSize="Small"
-                                                   Text="{Binding Hour}"/>
+                                                         Grid.Column="0"
+                                                         Orientation="Horizontal"
+                                                         HorizontalOptions="End">
+                                                            <Image Source="icon_heure.png"/>
+                                                            <Label TextColor="#FFB53F"
+                                                                   FontSize="Small"
+                                                                   Text="{Binding Hour}"/>
                                             </StackLayout>
                                         </Grid>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView ItemsSource="{Binding Calendriers}"
+                          IsVisible="False"
+                          x:Name="lvConferenciers"
+                          HasUnevenRows="True"
+                          Margin="0,0,15,0"
+                          BackgroundColor="#F0F0F0"
+                          SeparatorVisibility="None"
+                          ItemSelected="OnListViewItemSelected"
+                          ItemTapped="OnListViewItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="#FFFFFF"
+                                       CornerRadius="20"
+                                       BorderColor="#FFFFFF" 
+                                       Margin="10"
+                                       HasShadow="False">
+                                    <Grid Margin="0,0,0,1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.25*" />
+                                            <ColumnDefinition Width="0.40*"/>
+                                            <ColumnDefinition Width="0.35*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Frame CornerRadius="20"
+                                               Grid.RowSpan="2"
+                                               WidthRequest="80"
+                                               HeightRequest="90"
+                                               Grid.Column="0"
+                                               BackgroundColor="#FFFFFF"
+                                               HasShadow="True">
+                                            <Image Source="{Binding ImageUrl}"/>
+                                        </Frame>
+                                        <Label Text="{Binding Name}"
+                                               Grid.Row="0"
+                                               Grid.Column="1"
+                                               FontAttributes="Bold" />
+                                        <Label TextColor="#FFB53F"
+                                               Grid.Row="1"
+                                               Grid.Column="1"
+                                               FontSize="Small"
+                                               Text="{Binding Location}"/>
+                                        <ImageButton 
+                                               VerticalOptions="Start"
+                                               HorizontalOptions="End"
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               Source="icon_FavOFF.png" 
+                                               Pressed="btnFavoris"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell>
