@@ -12,5 +12,6 @@
             <mypages:Favoris Title="Favoris" IconImageSource="icon_lieu.png"></mypages:Favoris>
             <mypages:Participants Title="Examen" IconImageSource="icon_ExamOFF.svg"></mypages:Participants>
             <mypages:Download Title="Fichiers" IconImageSource="icon_heure.png"></mypages:Download>
-        </TabbedPage.Children>
+            <mypages:Favoris Title="Messages" IconImageSource="courrier.png"></mypages:Favoris>
+    </TabbedPage.Children>
  </TabbedPage>

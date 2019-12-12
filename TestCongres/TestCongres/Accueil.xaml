@@ -61,18 +61,42 @@
                                     Source="btn_Exposants.png" 
                                     Pressed="btnExposantClicked"/>
                 </Grid>
-                <StackLayout Padding="20,20">
-                    <Frame CornerRadius="25" 
-                        HeightRequest="50"
-                           WidthRequest="50"
-                           HorizontalOptions="Start"
-                           Padding="0"
-                           IsClippedToBounds="True">
-                        <Image Source="Hélène TREMBLAY.png" 
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
-                    </Frame>
-                    <Label Text="Aujourd'hui" FontFamily="Butler_Bold" HorizontalOptions="Start" TextColor="White" FontSize="28"/>
+                <StackLayout Padding="0,20,0,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Frame CornerRadius="25" 
+                               HeightRequest="50"
+                               WidthRequest="50"
+                               Padding="0"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               HorizontalOptions="Start"
+                               IsClippedToBounds="True">
+                               <Image Source="Hélène TREMBLAY.png" 
+                                      HorizontalOptions="FillAndExpand"
+                                      VerticalOptions="FillAndExpand"/>
+                        </Frame>
+                        <Label Text="Aujourd'hui" 
+                               VerticalOptions="End"
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               FontFamily="Butler_Bold" 
+                               HorizontalOptions="Start" 
+                               TextColor="White" 
+                               FontSize="28"/>
+                        <Image Source="exoplanet_banner_1.gif" 
+                               Grid.Row="0"
+                               Grid.ColumnSpan="2"
+                               Aspect="AspectFill"
+                               IsAnimationPlaying="True"/>
+                    </Grid>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="btnProfil"/>
                     </StackLayout.GestureRecognizers>

@@ -143,15 +143,12 @@
                                             <ColumnDefinition Width="0.40*"/>
                                             <ColumnDefinition Width="0.35*" />
                                         </Grid.ColumnDefinitions>
-                                        <Frame CornerRadius="20"
-                                               Grid.RowSpan="2"
-                                               WidthRequest="80"
-                                               HeightRequest="90"
-                                               Grid.Column="0"
-                                               BackgroundColor="#FFFFFF"
-                                               HasShadow="True">
-                                            <Image Source="{Binding ImageUrl}"/>
-                                        </Frame>
+                                        <Image Source="{Binding ImageUrl}"
+                                            Grid.RowSpan="2"
+                                            Grid.Column="0"
+                                            WidthRequest="80"
+                                            HeightRequest="90"
+                                            BackgroundColor="#FFFFFF"/>
                                         <Label Text="{Binding Name}"
                                                Grid.Row="0"
                                                Grid.Column="1"
