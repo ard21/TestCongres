@@ -19,6 +19,24 @@ namespace TestCongres
             InitializeComponent();
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
             wvTexte.WidthRequest = mainDisplayInfo.Width - 400;
+            SizeChanged += OnSizeChanged;
+
+        }
+        void OnSizeChanged(object sender, EventArgs e)
+        {
+            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+            wvTexte.WidthRequest = mainDisplayInfo.Width - 400;
+            //backImage.WidthRequest = mainDisplayInfo.Width;
+
+            //if (orientation == DisplayOrientation.Landscape)
+            //{
+            //    this.BackgroundImageSource = ImageSource.FromFile("back_body - land.png");
+            //}
+            //else
+            //{
+            //    this.BackgroundImageSource = ImageSource.FromFile("back_body.png");
+            //}
         }
 
         async private void btnBack(object sender, EventArgs e)

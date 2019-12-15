@@ -21,12 +21,14 @@ namespace TestCongres
             {
                 StackImage.IsVisible = false;
                 StackBarCode.IsVisible = true;
+                this.BackgroundImageSource = null;
                 RenderBarcode();
             }
             else
             {
                 StackImage.IsVisible = true;
                 StackBarCode.IsVisible = false;
+                this.BackgroundImageSource = ImageSource.FromFile("back_body.png");
             }
         }
         public void RenderBarcode()

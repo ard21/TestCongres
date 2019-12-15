@@ -464,4 +464,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\exoplanet_banner_1.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_body - land.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_body%402x - land.png" />
+  </ItemGroup>
 </Project>

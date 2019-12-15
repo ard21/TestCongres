@@ -8,7 +8,8 @@
     <StackLayout Padding="0,20">
         <RelativeLayout>
             <Image x:Name="backImage"
-                Source="back_popup_Card.png"/>
+                Source="back_popup_Card.png"
+/>
             <ImageButton HorizontalOptions="End"
                     Source="icon_HomeON.png"
                     Pressed="btnBack"
