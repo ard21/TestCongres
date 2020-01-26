@@ -351,12 +351,6 @@
     <BundleResource Include="Resources\btn_favoriteOFF%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\btn_favoriteON.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\btn_favoriteON%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\btn_Horaire.png" />
   </ItemGroup>
   <ItemGroup>
@@ -469,5 +463,14 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\back_body%402x - land.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\btn_favoriteON%402x_flattened.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\btn_favoriteON%402x_PScopy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_Fav_White%402x.png" />
   </ItemGroup>
 </Project>
