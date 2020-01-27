@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TestCongres.Exposants">
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor="#F0F0F0">
+            <Image x:Name="back_header"
+                   Source="back_header_Menu.png"
+                    MinimumHeightRequest="300"
+                       RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+            <ImageButton HorizontalOptions="End"
+                    Source="icon_HomeON.png"
+                    Pressed="btnBack"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Constant=-40}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=20}"/>
+            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
+                            Type=RelativeToView,
+                            ElementName=back_header,
+                            Property=Y,
+                            Factor=1,
+                            Constant=150}">
+                <ListView ItemsSource="{Binding ExposantsListe}"
+                          x:Name="lvExposant"
+                          HasUnevenRows="True"
+                          Margin="0,0,15,0"
+                          BackgroundColor="#F0F0F0"
+                          SeparatorVisibility="None"
+                          ItemSelected="OnListViewItemSelected"
+                          ItemTapped="OnListViewItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="#FFFFFF"
+                                       CornerRadius="20"
+                                       BorderColor="#FFFFFF" 
+                                       Margin="10"
+                                       HasShadow="False">
+                                    <Grid Margin="0,0,0,1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.25*" />
+                                            <ColumnDefinition Width="0.40*"/>
+                                            <ColumnDefinition Width="0.35*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{Binding Photo}"
+                                            Grid.RowSpan="2"
+                                            Grid.Column="0"
+                                            WidthRequest="80"
+                                            HeightRequest="90"
+                                            BackgroundColor="#FFFFFF"/>
+                                        <Label Text="{Binding Nom}"
+                                               Grid.Row="0"
+                                               Grid.Column="1"
+                                               FontAttributes="Bold" />
+                                        <Label TextColor="#FFB53F"
+                                               Grid.Row="1"
+                                               Grid.Column="1"
+                                               FontSize="Small"
+                                               Text="{Binding Titre}"/>
+                                        <ImageButton 
+                                               VerticalOptions="Start"
+                                               HorizontalOptions="End"
+                                               Grid.Row="0"
+                                               Grid.Column="2"
+                                               Source="icon_FavOFF.png" 
+                                               Pressed="btnFavoris"/>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

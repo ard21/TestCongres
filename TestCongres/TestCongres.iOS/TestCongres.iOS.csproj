@@ -473,4 +473,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\icon_Fav_White%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\falcan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mtm.png" />
+  </ItemGroup>
 </Project>
