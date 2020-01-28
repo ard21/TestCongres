@@ -6,40 +6,32 @@
              mc:Ignorable="d"
              x:Class="TestCongres.Download">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView ItemsSource="{Binding Fichiers}"
+        <StackLayout Padding="0,20">
+            <StackLayout x:Name="stackListView"
+                         IsVisible="True">
+                <ListView ItemsSource="{Binding Fichiers}"
                   HasUnevenRows="true"
                   ItemSelected="OnListViewItemSelected"
                   ItemTapped="OnListViewItemTapped">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Padding="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Image Grid.RowSpan="2"
-                           Source="{Binding ImageUrl}"
-                           Aspect="AspectFill"
-                           HeightRequest="60"
-                           WidthRequest="60" />
-                                <Label Grid.Column="1"
-                           Text="{Binding Name}"
-                           FontAttributes="Bold" />
-                                <Label Grid.Row="1"
-                           Grid.Column="1"
-                           Text="{Binding Location}"
-                           VerticalOptions="End" />
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding Name}"
+                                    FontAttributes="Bold" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout x:Name="stackWeb"
+                         IsVisible="False">
+                <Button Text="On farmeeeeeee"
+                        Clicked="btnBack">
+                </Button>
+                <WebView WidthRequest="1000" 
+                     HeightRequest="1000" 
+                     Source="https://secure.innovision.qc.ca/demo/Images/Compteurs-BVO.pdf"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

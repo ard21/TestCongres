@@ -20,6 +20,14 @@
                                                                       Constant=-40}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                       Constant=20}"/>
+            <Label Text="Exposants" 
+                               VerticalOptions="End"
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               FontFamily="Butler_Bold" 
+                               HorizontalOptions="Start" 
+                               TextColor="White" 
+                               FontSize="28"/>
             <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
                             Type=RelativeToView,
                             ElementName=back_header,

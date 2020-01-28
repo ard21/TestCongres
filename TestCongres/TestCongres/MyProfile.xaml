@@ -10,7 +10,10 @@
         <RelativeLayout>
             <ImageButton HorizontalOptions="End"
                     Source="icon_HomeON.png"
+                    Aspect="AspectFit"
                     Pressed="btnBack"
+                    MinimumHeightRequest="32"
+                    MinimumWidthRequest="32"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
                                                                       Constant=-40}"
