@@ -6,33 +6,67 @@
              mc:Ignorable="d"
              x:Class="TestCongres.Download">
     <ContentPage.Content>
-        <StackLayout Padding="0,20">
-            <StackLayout x:Name="stackListView"
-                         IsVisible="True">
-                <ListView ItemsSource="{Binding Fichiers}"
-                  HasUnevenRows="true"
-                  ItemSelected="OnListViewItemSelected"
-                  ItemTapped="OnListViewItemTapped">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label Text="{Binding Name}"
-                                    FontAttributes="Bold" />
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+        <RelativeLayout BackgroundColor="#F0F0F0">
+            <Image x:Name="back_header"
+                   Source="back_header_Menu.png"
+                    MinimumHeightRequest="300"
+                       RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+            <Label Text="Fichiers" 
+                               VerticalOptions="End"
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               FontFamily="Butler_Bold" 
+                               HorizontalOptions="Start" 
+                               TextColor="White" 
+                               FontSize="28"
+                               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                                 Property=Width, 
+                                                                                 Factor=0.35}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                                 Constant=20}"/>
+            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
+                            Type=RelativeToView,
+                            ElementName=back_header,
+                            Property=Y,
+                            Factor=1,
+                            Constant=150}">
+                <StackLayout x:Name="stackListView"
+                             IsVisible="True">
+                    <ListView ItemsSource="{Binding Fichiers}"
+                      HasUnevenRows="true"
+                      Margin="0,0,15,0"
+                      BackgroundColor="#F0F0F0"
+                      SeparatorVisibility="None"
+                      ItemSelected="OnListViewItemSelected"
+                      ItemTapped="OnListViewItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="#FFFFFF"
+                                       CornerRadius="20"
+                                       BorderColor="#FFFFFF" 
+                                       Margin="10"
+                                       HasShadow="False">
+                                        <Label Text="{Binding Name}"
+                                        FontAttributes="Bold" />
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <StackLayout x:Name="stackWeb"
+                             IsVisible="False">
+                    <Button Text="On farmeeeeeee"
+                            Clicked="btnBack">
+                    </Button>
+                    <WebView WidthRequest="1000" 
+                         HeightRequest="1000" 
+                         Source="https://secure.innovision.qc.ca/demo/Images/Compteurs-BVO.pdf"/>
+                </StackLayout>
             </StackLayout>
-            <StackLayout x:Name="stackWeb"
-                         IsVisible="False">
-                <Button Text="On farmeeeeeee"
-                        Clicked="btnBack">
-                </Button>
-                <WebView WidthRequest="1000" 
-                     HeightRequest="1000" 
-                     Source="https://secure.innovision.qc.ca/demo/Images/Compteurs-BVO.pdf"/>
-            </StackLayout>
-        </StackLayout>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
     

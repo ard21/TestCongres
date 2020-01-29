@@ -27,7 +27,12 @@
                                FontFamily="Butler_Bold" 
                                HorizontalOptions="Start" 
                                TextColor="White" 
-                               FontSize="28"/>
+                               FontSize="28"
+                               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                                 Property=Width, 
+                                                                                 Factor=0.3}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                                 Constant=20}"/>
             <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
                             Type=RelativeToView,
                             ElementName=back_header,
