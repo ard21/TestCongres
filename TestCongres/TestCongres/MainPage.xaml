@@ -9,9 +9,9 @@
              x:Class="TestCongres.MainPage">
         <TabbedPage.Children>
             <mypages:Accueil Title="Accueil" IconImageSource="icon_HomeOFF.png"></mypages:Accueil  >
-        <mypages:Favoris Title="Favoris" IconImageSource="icon_FavON.png"></mypages:Favoris>
-        <mypages:Participants Title="Examen" IconImageSource="icon_ExamON.png"></mypages:Participants>
-        <mypages:Download Title="Fichiers" IconImageSource="icon_Fav_White@2x.png"></mypages:Download>
-            <mypages:Favoris Title="Messages" IconImageSource="courrier.png"></mypages:Favoris>
+            <mypages:Favoris Title="Favoris" IconImageSource="icon_FavON.png"></mypages:Favoris>
+            <mypages:Participants Title="Examen" IconImageSource="icon_ExamON.png"></mypages:Participants>
+            <mypages:Download Title="Fichiers" IconImageSource="icon_Fav_White@2x.png"></mypages:Download>
+            <mypages:Messages Title="Messages" IconImageSource="courrier.png"></mypages:Messages>
     </TabbedPage.Children>
  </TabbedPage>

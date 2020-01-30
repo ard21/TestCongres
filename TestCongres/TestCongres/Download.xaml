@@ -59,11 +59,14 @@
                 <StackLayout x:Name="stackWeb"
                              IsVisible="False">
                     <Button Text="On farmeeeeeee"
+                            HorizontalOptions="Start"
+                            TextColor="Blue"
                             Clicked="btnBack">
                     </Button>
-                    <WebView WidthRequest="1000" 
-                         HeightRequest="1000" 
-                         Source="https://secure.innovision.qc.ca/demo/Images/Compteurs-BVO.pdf"/>
+                    <WebView x:Name="webViewFichier"
+                             WidthRequest="1000" 
+                             HeightRequest="1000"
+                             Source="https://secure.innovision.qc.ca/demo/Images/Compteurs-BVO.pdf"/>
                 </StackLayout>
             </StackLayout>
         </RelativeLayout>

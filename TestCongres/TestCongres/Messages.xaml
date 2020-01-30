@@ -6,9 +6,86 @@
              mc:Ignorable="d"
              x:Class="TestCongres.Messages">
     <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Label HorizontalOptions="Center" Text="Messages ?"></Label>
-            
-        </StackLayout>
+        <RelativeLayout BackgroundColor="#F0F0F0">
+            <Image x:Name="back_header"
+                   Source="back_header_Menu.png"
+                    MinimumHeightRequest="300"
+                       RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+            <Label Text="Messages" 
+                               VerticalOptions="End"
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               FontFamily="Butler_Bold" 
+                               HorizontalOptions="Start" 
+                               TextColor="White" 
+                               FontSize="28"
+                               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                                 Property=Width, 
+                                                                                 Factor=0.3}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                                 Constant=20}"/>
+            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
+                            Type=RelativeToView,
+                            ElementName=back_header,
+                            Property=Y,
+                            Factor=1,
+                            Constant=150}">
+                <StackLayout x:Name="stackListView"
+                             IsVisible="True">
+                    <ListView ItemsSource="{Binding MessagesGlobaux}"
+                          x:Name="lvMesaages"
+                          HasUnevenRows="True"
+                          Margin="0,0,15,0"
+                          BackgroundColor="#F0F0F0"
+                          SeparatorVisibility="None"
+                          ItemSelected="OnListViewItemSelected"
+                          ItemTapped="OnListViewItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="#FFFFFF"
+                                       CornerRadius="20"
+                                       BorderColor="#FFFFFF" 
+                                       Margin="10"
+                                       HasShadow="False">
+                                        <Grid Margin="0,0,0,1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.20*" />
+                                                <ColumnDefinition Width="0.45*"/>
+                                                <ColumnDefinition Width="0.25*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Source="{Binding ImageUrl}"
+                                            Grid.RowSpan="2"
+                                            Grid.Column="0"
+                                            WidthRequest="80"
+                                            HeightRequest="90"
+                                            BackgroundColor="#FFFFFF"/>
+                                            <Label Text="{Binding DeQui}"
+                                               Grid.Row="0"
+                                               Grid.Column="1"
+                                               FontAttributes="Bold" />
+                                            <Label Text="{Binding Date}"
+                                               Grid.Row="0"
+                                               Grid.Column="2"/>
+                                            <Label TextColor="#FFB53F"
+                                               Grid.Row="1"
+                                               Grid.Column="1"
+                                               Grid.ColumnSpan="2"
+                                               FontSize="Small"
+                                               Text="{Binding Sujet}"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
