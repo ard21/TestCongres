@@ -17,12 +17,18 @@ namespace TestCongres
             MessagesGlobaux.Add(new MessageGlobal
             {
                 DeQui = "Administration Congrès",
-                Sujet = "Bla bla bla",
+                Sujet = "Le congrès s'ouvre avec le gala ce soir à 17 h 30",
                 Date = "2020-01-27",
-                ImageUrl = "http://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Saimiri_sciureus-1_Luc_Viatour.jpg/220px-Saimiri_sciureus-1_Luc_Viatour.jpg"
-
+                ImageUrl = "Josée NÉRON.png"
             });
 
+            MessagesGlobaux.Add(new MessageGlobal
+            {
+                DeQui = "Atleon inc.",
+                Sujet = "Le cocktail sera offert par Atleon inc.",
+                Date = "2020-01-28",
+                ImageUrl = "Carol TREMBLAY.png"
+            });
 
             BindingContext = this;
         }
@@ -38,6 +44,4 @@ namespace TestCongres
         }
 
     }
-}
-
 }

@@ -45,7 +45,7 @@
                             <DataTemplate>
                                 <ViewCell>
                                     <Frame BackgroundColor="#FFFFFF"
-                                       CornerRadius="20"
+                                       CornerRadius="15"
                                        BorderColor="#FFFFFF" 
                                        Margin="10"
                                        HasShadow="False">
@@ -55,29 +55,37 @@
                                                 <RowDefinition Height="Auto" />
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="0.20*" />
-                                                <ColumnDefinition Width="0.45*"/>
+                                                <ColumnDefinition Width="0.15*" />
+                                                <ColumnDefinition Width="0.6*"/>
                                                 <ColumnDefinition Width="0.25*" />
                                             </Grid.ColumnDefinitions>
-                                            <Image Source="{Binding ImageUrl}"
-                                            Grid.RowSpan="2"
-                                            Grid.Column="0"
-                                            WidthRequest="80"
-                                            HeightRequest="90"
-                                            BackgroundColor="#FFFFFF"/>
-                                            <Label Text="{Binding DeQui}"
-                                               Grid.Row="0"
-                                               Grid.Column="1"
-                                               FontAttributes="Bold" />
-                                            <Label Text="{Binding Date}"
-                                               Grid.Row="0"
-                                               Grid.Column="2"/>
-                                            <Label TextColor="#FFB53F"
-                                               Grid.Row="1"
-                                               Grid.Column="1"
-                                               Grid.ColumnSpan="2"
-                                               FontSize="Small"
-                                               Text="{Binding Sujet}"/>
+                                            <Frame  CornerRadius="25" 
+                                                    Grid.Row="0"
+                                                    Grid.Column="0"
+                                                    Grid.RowSpan="2"
+                                                    WidthRequest="50"
+                                                    HeightRequest="50"
+                                                    HorizontalOptions="Start"
+                                                    Padding="0"
+                                                    IsClippedToBounds="True">
+                                                <Image  Source="{Binding ImageUrl}"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Center"/>
+                                            </Frame>
+                                            <Label  Text="{Binding DeQui}"
+                                                    Grid.Row="0"
+                                                    Grid.Column="1"
+                                                    FontAttributes="Bold" />
+                                            <Label  Text="{Binding Date}"
+                                                    Grid.Row="0"
+                                                    Grid.Column="2"
+                                                    FontSize="Small"/>
+                                            <Label  TextColor="#FFB53F"
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"
+                                                    Grid.ColumnSpan="2"
+                                                    FontSize="Small"
+                                                    Text="{Binding Sujet}"/>
                                         </Grid>
                                     </Frame>
                                 </ViewCell>
