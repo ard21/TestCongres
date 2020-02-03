@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TestCongres.MessagesDetail">
+    <ContentPage.Content>
+        <StackLayout Padding="0,20">
+            <RelativeLayout>
+                <Image Source="back_popup_Card.png"/>
+                <ImageButton HorizontalOptions="End"
+                    Source="icon_HomeON.png"
+                    Pressed="btnBack"
+                     x:Name="icon_Home"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Constant=-40}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=0}"/>
+                <Label Text="Message de quelqu'un"
+                   x:Name="societe" 
+                   FontSize="Large"
+                   FontFamily="Butler_Bold.otf"
+                   TextColor="White" 
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Factor=0.5,
+                                                                      Constant=-90}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=25}"/>
+                <Label Padding="0,10,20,0" 
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Width, 
+                                                                      Factor=0.01}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                      Property=Height, 
+                                                                      Factor=0.33}"
+                       Text="Mets donc du texte à l'infini pour voir si on est capable de le lire sans cligner des yeux et avoir faim car on sait tous qu'avoir faim donne des nausées et que les nausées n'aident en rien le fait d'avoir faim !!!"/>
+            </RelativeLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

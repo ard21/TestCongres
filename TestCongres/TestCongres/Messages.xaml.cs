@@ -32,9 +32,10 @@ namespace TestCongres
 
             BindingContext = this;
         }
-        void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Fichier selectedItem = e.SelectedItem as Fichier;
+            await Navigation.PushModalAsync(new MessagesDetail(), false);
 
         }
 

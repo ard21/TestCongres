@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using ExpanViewXam.Models;
-using ExpanViewXam.ViewModels;
-using Xamarin.Forms;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ExpanViewXam.Views
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace TestCongres
 {
-    public partial class EmployeeDetailJob : ContentPage
+    private ObservableCollection<JobGroupViewModel> getContents;
+    private ObservableCollection<JobGroupViewModel> _expandedContent;
+
+    public partial class FavorisDetail : ContentPage
     {
-        private ObservableCollection<JobGroupViewModel> getContents;
-        private ObservableCollection<JobGroupViewModel> _expandedContent;
-        public EmployeeDetailJob()
+        public FavorisDetail()
         {
             InitializeComponent();
-
             getContents = JobGroupViewModel.Contents;
             UpdateListContent();
         }
