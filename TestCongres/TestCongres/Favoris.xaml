@@ -5,4 +5,89 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TestCongres.Favoris">
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor="#F0F0F0">
+            <Image x:Name="back_header"
+                   Source="back_header_Menu.png"
+                    MinimumHeightRequest="300"
+                       RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+            <Label Text="Favoris" 
+                   VerticalOptions="End"
+                   FontFamily="Butler_Bold" 
+                   HorizontalOptions="Start" 
+                   TextColor="White" 
+                   FontSize="28"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                     Property=Width, 
+                                                                     Factor=0.4}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                     Constant=20}"/>
+            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
+                            Type=RelativeToView,
+                            ElementName=back_header,
+                            Property=Y,
+                            Factor=1,
+                            Constant=150}">
+                <StackLayout x:Name="stackListView"
+                             IsVisible="True">
+                    <ListView ItemsSource="{Binding grouped}"
+                          x:Name="lvFavoris"
+                          HasUnevenRows="True"
+                          Margin="0,0,15,0"
+                          BackgroundColor="#F0F0F0"
+                          SeparatorVisibility="None"
+                          GroupDisplayBinding="{Binding LongName}" 
+                          GroupShortNameBinding="{Binding ShortName}"
+                          ItemSelected="OnListViewItemSelected"
+                          ItemTapped="OnListViewItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="#FFFFFF"
+                                       CornerRadius="15"
+                                       BorderColor="#FFFFFF" 
+                                       Margin="10"
+                                       HasShadow="False">
+                                        <Grid Margin="0,0,0,1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.15*" />
+                                                <ColumnDefinition Width="0.85*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Frame  CornerRadius="25" 
+                                                    Grid.Row="0"
+                                                    Grid.Column="0"
+                                                    Grid.RowSpan="2"
+                                                    WidthRequest="50"
+                                                    HeightRequest="50"
+                                                    HorizontalOptions="Start"
+                                                    Padding="0"
+                                                    IsClippedToBounds="True">
+                                                <Image  Source="{Binding ImageURL}"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Center"/>
+                                            </Frame>
+                                            <Label  Text="{Binding Nom}"
+                                                    Grid.Row="0"
+                                                    Grid.Column="1"
+                                                    FontAttributes="Bold" />
+                                            <Label  TextColor="#FFB53F"
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"
+                                                    FontSize="Small"
+                                                    Text="{Binding Comment}"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
 </ContentPage>
