@@ -46,5 +46,7 @@
 			<string>Type de document 1</string>
 		</dict>
 	</array>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcons.appiconset</string>
 </dict>
 </plist>

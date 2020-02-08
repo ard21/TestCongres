@@ -66,13 +66,15 @@ namespace TestCongres
 					{
 						Nom = "Les dix recommandations du syndic",
 						Type = "S",
-						Comment = "Local 210E, 8 h"
+						Comment = "Local 210E, 8 h",
+						ImageURL = "OCQ_rond.png"
 					},
 					new FavorisModel
 					{
 						Nom = "Protection et sécurité de l'information",
 						Type = "S",
-						Comment = "local 510, 9 h 30"
+						Comment = "local 510, 9 h 30",
+						ImageURL = "OCQ_rond.png"
 				}}));
 
 			BindingContext = this;
