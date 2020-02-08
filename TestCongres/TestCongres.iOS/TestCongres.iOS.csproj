@@ -479,4 +479,19 @@
   <ItemGroup>
     <BundleResource Include="Resources\mtm.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_Files_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_Messages_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_Files_white%401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_Messages_white%401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LogoAtleonSeul%402x.png" />
+  </ItemGroup>
 </Project>
