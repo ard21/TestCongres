@@ -69,15 +69,14 @@
                                     <Frame  CornerRadius="25" 
                                             Grid.Row="0"
                                             Grid.Column="0"
-                                            Grid.RowSpan="2"
                                             WidthRequest="50"
                                             HeightRequest="50"
                                             HorizontalOptions="Start"
                                             Padding="0"
                                             IsClippedToBounds="True">
                                         <Image Source="{Binding ImageURL}"
-                                               HorizontalOptions="Center"
-                                               VerticalOptions="Center" />
+                                               HorizontalOptions="FillAndExpand"
+                                               VerticalOptions="FillAndExpand" />
                                     </Frame>
                                     <Label  Grid.Column="1"
                                             Text="{Binding Nom}"

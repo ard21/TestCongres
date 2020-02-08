@@ -12,6 +12,17 @@
                     MinimumHeightRequest="300"
                        RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+            <ImageButton    HorizontalOptions="End"
+                            Source="icon_HomeON.png"
+                            Pressed="btnBack"
+                            x:Name="boutonBack"
+                            IsVisible="False"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                              Property=Width, 
+                                                                              Constant=-40}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                              Constant=10}"/>
+
             <Label Text="Fichiers" 
                                VerticalOptions="End"
                                Grid.Row="1"
@@ -58,11 +69,6 @@
                 </StackLayout>
                 <StackLayout x:Name="stackWeb"
                              IsVisible="False">
-                    <Button Text="On farmeeeeeee"
-                            HorizontalOptions="Start"
-                            TextColor="Blue"
-                            Clicked="btnBack">
-                    </Button>
                     <WebView x:Name="webViewFichier"
                              WidthRequest="1000" 
                              HeightRequest="1000"

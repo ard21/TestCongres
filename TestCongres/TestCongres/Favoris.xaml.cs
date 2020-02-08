@@ -14,7 +14,6 @@ namespace TestCongres
 
     public partial class Favoris : ContentPage
     {
-		//public IList<GroupedFavorisModel> grouped { get; private set; }
 		public List<GroupedFavorisModel> favori { get; private set; } = new List<GroupedFavorisModel>();
 		public Favoris()
         {
@@ -26,14 +25,16 @@ namespace TestCongres
 					{
 						Nom = "Johanne Lambert", 
 						Comment = "Rédaction des fiducies de gel", 
+						Type = "C",
 						ImageURL = "Carolle DALLAIRE.png"
 					},
 					new FavorisModel
 					{
 						Nom = "Marc Tremblay", 
-						Comment = "Assurance de personnes", 
-						ImageURL = "André PLANTE.png"                   },
-				}));
+						Comment = "Assurance de personnes",
+						Type = "C",
+						ImageURL = "André PLANTE.png"                   
+				}}));
 
 			favori.Add(new GroupedFavorisModel("Exposants", new List<FavorisModel>
 				{
@@ -41,18 +42,21 @@ namespace TestCongres
 					{
 						Nom = "Atleon inc.", 
 						Comment = "Technologie de votation",
+						Type = "E",
 						ImageURL = "LogoAtleonSeul@2x.png"
 					},
 					new FavorisModel
 					{
 						Nom = "Falcan Medical", 
 						Comment = "Lits et fauteuils",
+						Type = "E",
 						ImageURL = "falcan.gif"
 					},
 					new FavorisModel
 					{
 						Nom = "MTM - Medical Tronik", 
 						Comment = "Matériel médical de haute technologie",
+						Type = "E",
 						ImageURL = "mtm.png"
 				}}));
 
@@ -60,44 +64,39 @@ namespace TestCongres
 				{
 					new FavorisModel
 					{
-						Nom = "Les dix recommandations du syndic", 
+						Nom = "Les dix recommandations du syndic",
+						Type = "S",
 						Comment = "Local 210E, 8 h"
 					},
 					new FavorisModel
 					{
-						Nom = "Protection et sécurité de l'information", 
+						Nom = "Protection et sécurité de l'information",
+						Type = "S",
 						Comment = "local 510, 9 h 30"
 				}}));
 
-			//var exposantsGroup = new GroupedFavorisModel() { LongName = "Exposants", ShortName = "e" };
-			//var sessionsGroup = new GroupedFavorisModel() { LongName = "Sessions", ShortName = "s" };
-			//exposantsGroup.Add(new FavorisModel() { Nom = "Atleon inc.", Comment = "Technologie de votation" });
-			//exposantsGroup.Add(new FavorisModel() { Nom = "Falcan Medical", Comment = "Lits et fauteuils" });
-			//exposantsGroup.Add(new FavorisModel() { Nom = "MTM - Medical Tronik", Comment = "Matériel médical de haute technologie" });
-			//sessionsGroup.Add(new FavorisModel() { Nom = "Les dix recommandations du syndic", Comment = "Local 210E, 8 h" });
-			//sessionsGroup.Add(new FavorisModel() { Nom = "Protection et sécurité de l'information", Comment = "local 510, 9 h 30" });
-
-			//grouped.Add(conferencierGroup);
-			//grouped.Add(exposantsGroup);
-			//grouped.Add(sessionsGroup);
-
 			BindingContext = this;
-
-			//lvFavoris.ItemsSource = grouped;
-			//lvFavoris.IsGroupingEnabled = true;
-			//lvFavoris.GroupDisplayBinding = new Binding("LongName");
-			//lvFavoris.GroupShortNameBinding = new Binding("ShortName");
-
-			//lvFavoris.ItemTemplate = new DataTemplate(typeof(ViewCell));
-			//lvFavoris.ItemTemplate.SetBinding(TextCell.TextProperty, "Nom");
-			//lvFavoris.ItemTemplate.SetBinding (TextCell.DetailProperty, "Comment");
-
-			//Content = lvFavoris;
 
 		}
 		async private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			await Navigation.PushModalAsync(new MessagesDetail(), false);
+			string TypeChoisi= (e.CurrentSelection.FirstOrDefault() as FavorisModel)?.Type;
+
+			switch (TypeChoisi)
+			{
+				case "C":
+					await Navigation.PushModalAsync(new Conferenciers(), false);
+					break;
+				case "E":
+					Console.WriteLine("Case 2");
+					await Navigation.PushModalAsync(new ExposantDetail(), false);
+					break;
+				case "S":
+					await Navigation.PushModalAsync(new Atelier(), false);
+					break;
+				default:
+					break;
+			}
 		}
 	}
 }

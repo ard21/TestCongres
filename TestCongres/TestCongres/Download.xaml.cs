@@ -65,7 +65,7 @@ namespace TestCongres
             Fichier selectedItem = e.SelectedItem as Fichier;
             stackWeb.IsVisible = true;
             stackListView.IsVisible = false;
-
+            boutonBack.IsVisible = true;
         }
 
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
@@ -76,7 +76,7 @@ namespace TestCongres
         {
             stackWeb.IsVisible = false;
             stackListView.IsVisible = true;
-
+            boutonBack.IsVisible = false;
         }
     }
 }

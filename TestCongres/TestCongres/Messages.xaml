@@ -62,15 +62,14 @@
                                             <Frame  CornerRadius="25" 
                                                     Grid.Row="0"
                                                     Grid.Column="0"
-                                                    Grid.RowSpan="2"
                                                     WidthRequest="50"
                                                     HeightRequest="50"
                                                     HorizontalOptions="Start"
                                                     Padding="0"
                                                     IsClippedToBounds="True">
                                                 <Image  Source="{Binding ImageUrl}"
-                                                        HorizontalOptions="Center"
-                                                        VerticalOptions="Center"/>
+                                                        HorizontalOptions="FillAndExpand"
+                                                        VerticalOptions="FillAndExpand"/>
                                             </Frame>
                                             <Label  Text="{Binding DeQui}"
                                                     Grid.Row="0"
@@ -82,8 +81,8 @@
                                                     FontSize="Small"/>
                                             <Label  TextColor="#FFB53F"
                                                     Grid.Row="1"
-                                                    Grid.Column="1"
-                                                    Grid.ColumnSpan="2"
+                                                    Grid.Column="0"
+                                                    Grid.ColumnSpan="3"
                                                     FontSize="Small"
                                                     Text="{Binding Sujet}"/>
                                         </Grid>
