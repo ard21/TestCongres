@@ -509,4 +509,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\OCQ_rond.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stop.png" />
+  </ItemGroup>
 </Project>

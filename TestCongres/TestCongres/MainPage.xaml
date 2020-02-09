@@ -10,7 +10,7 @@
         <TabbedPage.Children>
             <mypages:Accueil Title="Accueil" IconImageSource="icon_HomeOFF.png"></mypages:Accueil  >
             <mypages:Favoris Title="Favoris" IconImageSource="icon_FavON.png"></mypages:Favoris>
-        <mypages:Participants Title="Examen" IconImageSource="icon_ExamON.png"></mypages:Participants>
+            <mypages:Participants Title="Examen" IconImageSource="icon_ExamON.png"></mypages:Participants>
             <mypages:Download Title="Fichiers" IconImageSource="icon_Files_white@1.png"></mypages:Download>
             <mypages:Messages Title="Messages" IconImageSource="icon_Messages_white@1.png"></mypages:Messages>
     </TabbedPage.Children>

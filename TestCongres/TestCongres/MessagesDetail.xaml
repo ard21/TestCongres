@@ -10,14 +10,16 @@
             <RelativeLayout>
                 <Image Source="back_popup_Card.png"/>
                 <ImageButton HorizontalOptions="End"
-                    Source="icon_HomeON.png"
+                    Source="stop.png"
                     Pressed="btnBack"
-                     x:Name="icon_Home"
+                    HeightRequest="40"
+                    WidthRequest="40"        
+                    x:Name="icon_Home"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
-                                                                      Constant=-40}"
+                                                                      Constant=-45}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=0}"/>
+                                                                      Constant=15}"/>
                 <Label Text="Message de quelqu'un"
                    x:Name="societe" 
                    FontSize="Large"

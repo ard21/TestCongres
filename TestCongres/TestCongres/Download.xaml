@@ -13,15 +13,17 @@
                        RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
             <ImageButton    HorizontalOptions="End"
-                            Source="icon_HomeON.png"
+                            Source="stop.png"
                             Pressed="btnBack"
+                            HeightRequest="40"
+                            WidthRequest="40"        
                             x:Name="boutonBack"
                             IsVisible="False"
                             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                               Property=Width, 
-                                                                              Constant=-40}"
+                                                                              Constant=-45}"
                             RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                              Constant=10}"/>
+                                                                              Constant=15}"/>
 
             <Label Text="Fichiers" 
                                VerticalOptions="End"
