@@ -39,14 +39,19 @@ namespace TestCongres
         void OnSizeChanged(object sender, EventArgs e)
         {
             var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
             if (orientation == DisplayOrientation.Landscape)
             {
-                back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+                back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
+                //rltLayout.WidthRequest = mainDisplayInfo.Width;
+                //stackListView.WidthRequest = mainDisplayInfo.Width-200;
             }
             else
             {
                 back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+                //rltLayout.WidthRequest = mainDisplayInfo.Width;
+                //stackListView.WidthRequest = mainDisplayInfo.Width-200;
             }
         }
 
@@ -62,5 +67,9 @@ namespace TestCongres
             Fichier tappedItem = e.Item as Fichier;
         }
 
+        async private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            await Navigation.PushModalAsync(new MessagesDetail(), false);
+        }
     }
 }

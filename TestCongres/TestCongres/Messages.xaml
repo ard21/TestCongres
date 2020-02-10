@@ -6,45 +6,45 @@
              mc:Ignorable="d"
              x:Class="TestCongres.Messages">
     <ContentPage.Content>
-        <RelativeLayout BackgroundColor="#F0F0F0"
-                        HorizontalOptions="FillAndExpand">
+        <RelativeLayout BackgroundColor="#F0F0F0">
             <Image x:Name="back_header"
                    Source="back_header_Menu.png"
                    MinimumHeightRequest="300"
                    RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
             <Label Text="Messages" 
-                               VerticalOptions="End"
-                               Grid.Row="1"
-                               Grid.Column="1"
-                               FontFamily="Butler_Bold" 
-                               HorizontalOptions="Start" 
-                               TextColor="White" 
-                               FontSize="28"
-                               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
-                                                                                 Property=Width, 
-                                                                                 Factor=0.3}"
-                               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                                 Constant=20}"/>
-            <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
-                            Type=RelativeToView,
-                            ElementName=back_header,
-                            Property=Y,
-                            Factor=1,
-                            Constant=150}">
-                <StackLayout x:Name="stackListView"
-                             IsVisible="True">
-                    <ListView ItemsSource="{Binding MessagesGlobaux}"
-                          x:Name="lvMesaages"
-                          HasUnevenRows="True"
-                          Margin="0,0,15,0"
-                          BackgroundColor="#F0F0F0"
-                          SeparatorVisibility="None"
-                          ItemSelected="OnListViewItemSelected"
-                          ItemTapped="OnListViewItemTapped">
-                        <ListView.ItemTemplate>
+                   x:Name="lblMessages"
+                   VerticalOptions="End"
+                   FontFamily="Butler_Bold" 
+                   HorizontalOptions="Start" 
+                   TextColor="White" 
+                   FontSize="28"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                     Property=Width, 
+                                                                     Factor=0.5,
+                                                                     Constant=-60}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                     Constant=20}"/>
+            <StackLayout    x:Name="stackListView"
+                            RelativeLayout.YConstraint="{ConstraintExpression 
+                                Type=RelativeToView,
+                                ElementName=back_header,
+                                Property=Y,
+                                Factor=1,
+                                Constant=150}">
+                <StackLayout>
+                    <CollectionView ItemsSource="{Binding MessagesGlobaux}"
+                                SelectionMode="Single"
+                                SelectionChanged="OnCollectionViewSelectionChanged"
+                                IsGrouped="False"
+                                Margin="10,0,10,0"
+                                BackgroundColor="#F0F0F0">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout  Orientation="Vertical"
+                                                ItemSpacing="10" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <ViewCell>
                                     <Frame BackgroundColor="#FFFFFF"
                                        CornerRadius="15"
                                        BorderColor="#FFFFFF" 
@@ -88,10 +88,9 @@
                                                     Text="{Binding Sujet}"/>
                                         </Grid>
                                     </Frame>
-                                </ViewCell>
                             </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </StackLayout>
             </StackLayout>
         </RelativeLayout>

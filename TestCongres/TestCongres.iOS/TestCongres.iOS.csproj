@@ -512,4 +512,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\stop.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_header_Menu_land.png" />
+  </ItemGroup>
 </Project>

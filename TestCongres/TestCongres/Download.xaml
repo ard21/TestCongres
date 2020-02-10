@@ -27,15 +27,14 @@
 
             <Label Text="Fichiers" 
                                VerticalOptions="End"
-                               Grid.Row="1"
-                               Grid.Column="1"
                                FontFamily="Butler_Bold" 
                                HorizontalOptions="Start" 
                                TextColor="White" 
                                FontSize="28"
                                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                                  Property=Width, 
-                                                                                 Factor=0.35}"
+                                                                                 Factor=0.5,
+                                                                                 Constant=-50}"
                                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                                  Constant=20}"/>
             <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
@@ -46,28 +45,29 @@
                             Constant=150}">
                 <StackLayout x:Name="stackListView"
                              IsVisible="True">
-                    <ListView ItemsSource="{Binding Fichiers}"
-                      HasUnevenRows="true"
-                      Margin="0,0,15,0"
-                      BackgroundColor="#F0F0F0"
-                      SeparatorVisibility="None"
-                      ItemSelected="OnListViewItemSelected"
-                      ItemTapped="OnListViewItemTapped">
-                        <ListView.ItemTemplate>
+                    <CollectionView ItemsSource="{Binding Fichiers}"
+                                SelectionMode="Single"
+                                SelectionChanged="OnCollectionViewSelectionChanged"
+                                IsGrouped="False"
+                                Margin="10,0,10,0"
+                                BackgroundColor="#F0F0F0">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout  Orientation="Vertical"
+                                            ItemSpacing="10" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <ViewCell>
-                                    <Frame BackgroundColor="#FFFFFF"
-                                       CornerRadius="20"
-                                       BorderColor="#FFFFFF" 
-                                       Margin="10"
-                                       HasShadow="False">
-                                        <Label Text="{Binding Name}"
-                                        FontAttributes="Bold" />
-                                    </Frame>
-                                </ViewCell>
+                                <Frame BackgroundColor="#FFFFFF"
+                                    CornerRadius="20"
+                                    BorderColor="#FFFFFF" 
+                                    Margin="10"
+                                    HasShadow="False">
+                                    <Label Text="{Binding Name}"
+                                    FontAttributes="Bold" />
+                                </Frame>
                             </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </StackLayout>
                 <StackLayout x:Name="stackWeb"
                              IsVisible="False">

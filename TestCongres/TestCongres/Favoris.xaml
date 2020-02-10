@@ -19,7 +19,8 @@
                FontSize="28"
                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                  Property=Width, 
-                                                                 Factor=0.40}"
+                                                                 Factor=0.50, 
+                                                                 Constant=-40}"
                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                  Constant=20}"/>
         <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 

@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.Collections.ObjectModel;
 
 namespace TestCongres
 {
@@ -18,6 +15,7 @@ namespace TestCongres
 		public Favoris()
         {
             InitializeComponent();
+			SizeChanged += OnSizeChanged;
 
 			favori.Add(new GroupedFavorisModel("Conférenciers", new List<FavorisModel>
 				{
@@ -100,5 +98,20 @@ namespace TestCongres
 					break;
 			}
 		}
+		void OnSizeChanged(object sender, EventArgs e)
+		{
+			var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+			var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+
+			if (orientation == DisplayOrientation.Landscape)
+			{
+				back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
+			}
+			else
+			{
+				back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+			}
+		}
+
 	}
 }
