@@ -6,11 +6,12 @@
              mc:Ignorable="d"
              x:Class="TestCongres.Messages">
     <ContentPage.Content>
-        <RelativeLayout BackgroundColor="#F0F0F0">
+        <RelativeLayout BackgroundColor="#F0F0F0"
+                        HorizontalOptions="FillAndExpand">
             <Image x:Name="back_header"
                    Source="back_header_Menu.png"
-                    MinimumHeightRequest="300"
-                       RelativeLayout.WidthConstraint=
+                   MinimumHeightRequest="300"
+                   RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
             <Label Text="Messages" 
                                VerticalOptions="End"

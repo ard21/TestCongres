@@ -1,4 +1,6 @@
 ﻿
+using Xamarin.Essentials;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,6 +15,8 @@ namespace TestCongres
         public Messages()
         {
             InitializeComponent();
+            SizeChanged += OnSizeChanged;
+
             MessagesGlobaux = new List<MessageGlobal>();
             MessagesGlobaux.Add(new MessageGlobal
             {
@@ -32,6 +36,20 @@ namespace TestCongres
 
             BindingContext = this;
         }
+        void OnSizeChanged(object sender, EventArgs e)
+        {
+            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+
+            if (orientation == DisplayOrientation.Landscape)
+            {
+                back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+            }
+            else
+            {
+                back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+            }
+        }
+
         async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Fichier selectedItem = e.SelectedItem as Fichier;
