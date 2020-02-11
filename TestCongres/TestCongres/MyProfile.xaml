@@ -23,8 +23,8 @@
                    TextColor="Gray" 
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
-                                                                      Factor=0.5,
-                                                                      Constant=-75}"
+                                                                      Factor=0,
+                                                                      Constant=25}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                       Property=Height, 
                                                                       Factor=0.35, 
@@ -37,25 +37,25 @@
                     FontAttributes="Bold"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
-                                                                      Factor=0.5,
-                                                                      Constant=-60}"
+                                                                      Factor=0,
+                                                                      Constant=50}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                       Property=Height, 
                                                                       Factor=0.35, 
                                                                       Constant=0}"/>
             <Frame CornerRadius="25" 
-                    HeightRequest="50"
-                        WidthRequest="50"
-                        HorizontalOptions="Start"
-                        Padding="0"
-                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
-                                                                      Property=Width, 
-                                                                      Factor=0.5,
-                                                                      Constant=-75}"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                      Property=Height, 
-                                                                      Factor=0.25, 
-                                                                      Constant=-10}"
+                   HeightRequest="50"
+                   WidthRequest="50"
+                   HorizontalOptions="Start"
+                   Padding="0"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                     Property=Width, 
+                                                                     Factor=0,
+                                                                     Constant=100}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                     Property=Height, 
+                                                                     Factor=0.3, 
+                                                                     Constant=-10}"
                         IsClippedToBounds="True">
                 <Image Source="Hélène TREMBLAY.png" 
                         HorizontalOptions="Center"
@@ -67,7 +67,7 @@
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
                                                                       Factor=0.5,
-                                                                      Constant=-70}"
+                                                                      Constant=-85}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                       Property=Height, 
                                                                       Factor=0.6, 

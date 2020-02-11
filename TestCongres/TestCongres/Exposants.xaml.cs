@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
+
 
 namespace TestCongres
 {
@@ -13,6 +15,8 @@ namespace TestCongres
         public Exposants()
         {
             InitializeComponent();
+            SizeChanged += OnSizeChanged;
+
             ExposantsListe = new ObservableCollection<Supplier>();
 
             chargerExposant();
@@ -56,6 +60,27 @@ namespace TestCongres
         {
             await Navigation.PopModalAsync();
         }
+        void OnSizeChanged(object sender, EventArgs e)
+        {
+            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
+            if (orientation == DisplayOrientation.Landscape)
+            {
+                back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
+            }
+            else
+            {
+                back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+            }
+        }
+
+        async private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Supplier TypeChoisi = (e.CurrentSelection as Supplier);
+
+            await Navigation.PushModalAsync(new ExposantDetail(), false);
+
+        }
     }
 }

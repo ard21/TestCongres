@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
 
 namespace TestCongres
@@ -16,6 +17,8 @@ namespace TestCongres
         public Agenda()
         {
             InitializeComponent();
+
+            SizeChanged += OnSizeChanged;
 
             flagHoraireConferencier = true;
             //Calendriers = new List<Calendrier>();
@@ -244,6 +247,37 @@ namespace TestCongres
                 }
                 conferencier();
             }
+        }
+        void OnSizeChanged(object sender, EventArgs e)
+        {
+            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+
+            if (orientation == DisplayOrientation.Landscape)
+            {
+                back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
+            }
+            else
+            {
+                back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+            }
+        }
+
+        async private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Calendrier selectedItem = sender as Calendrier;
+
+            //string str = "La conférence choisie est " + selectedItem.Name;
+            //DisplayAlert("Sélection des conférences", str, "OK");
+            if (flagHoraireConferencier == true)
+            {
+                await Navigation.PushModalAsync(new Atelier(), false);
+            }
+            else
+            {
+                await Navigation.PushModalAsync(new Conferenciers(), false);
+            }
+
         }
     }
 }

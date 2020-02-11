@@ -26,17 +26,16 @@ namespace TestCongres
         {
             var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
-            wvTexte.WidthRequest = mainDisplayInfo.Width - 400;
-            //backImage.WidthRequest = mainDisplayInfo.Width;
+            stackSwap.WidthRequest = mainDisplayInfo.Width - 400;
 
-            //if (orientation == DisplayOrientation.Landscape)
-            //{
-            //    this.BackgroundImageSource = ImageSource.FromFile("back_body - land.png");
-            //}
-            //else
-            //{
-            //    this.BackgroundImageSource = ImageSource.FromFile("back_body.png");
-            //}
+            if (orientation == DisplayOrientation.Landscape)
+            {
+                back_header.Source = ImageSource.FromFile("back_popup_Card_land.png");
+            }
+            else
+            {
+                back_header.Source = ImageSource.FromFile("back_popup_Card.png");
+            }
         }
 
         async private void btnBack(object sender, EventArgs e)

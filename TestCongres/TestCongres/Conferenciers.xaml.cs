@@ -18,7 +18,8 @@ namespace TestCongres
         {
             InitializeComponent();
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
-            wvTexte.WidthRequest = mainDisplayInfo.Width - 400;
+            stackSwap.WidthRequest = mainDisplayInfo.Width - 400;
+            SizeChanged += OnSizeChanged;
         }
 
         async private void btnBack(object sender, EventArgs e)
@@ -38,5 +39,20 @@ namespace TestCongres
         {
             await Navigation.PushModalAsync(new Atelier(), false);
         }
+        void OnSizeChanged(object sender, EventArgs e)
+        {
+            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+
+            if (orientation == DisplayOrientation.Landscape)
+            {
+                back_header.Source = ImageSource.FromFile("back_popup_Card_land.png");
+            }
+            else
+            {
+                back_header.Source = ImageSource.FromFile("back_popup_Card.png");
+            }
+        }
+
     }
 }

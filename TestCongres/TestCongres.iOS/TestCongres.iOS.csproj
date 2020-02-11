@@ -515,4 +515,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\back_header_Menu_land.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_popup_Card_land.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background_generic_land.png" />
+  </ItemGroup>
 </Project>
