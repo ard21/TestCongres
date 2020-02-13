@@ -87,15 +87,15 @@
                     <ImageButton Source="congres_1.png"
                                  BackgroundColor="White"
                                  CornerRadius="20"
-                                 HeightRequest="50"/>
+                                 HeightRequest="75"/>
                     <ImageButton Source="congres_2.png"
                                  BackgroundColor="White"
                                  CornerRadius="20"
-                                 HeightRequest="50"/>
+                                 HeightRequest="75"/>
                     <ImageButton Source="congres_3.png"
                                  BackgroundColor="White"
                                  CornerRadius="20"
-                                 HeightRequest="50"/>
+                                 HeightRequest="75"/>
                 </StackLayout>
             </ScrollView>
 
