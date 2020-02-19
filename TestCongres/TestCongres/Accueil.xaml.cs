@@ -13,6 +13,7 @@ namespace TestCongres
             InitializeComponent();
             SizeChanged += OnSizeChanged;
         }
+        // resize the image to be contained within a maximum width and height, keeping aspect ratio
         void OnSizeChanged(object sender, EventArgs e)
         {
             var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
@@ -28,8 +29,7 @@ namespace TestCongres
             {
                 StackImage.IsVisible = true;
                 StackBarCode.IsVisible = false;
-                //this.BackgroundImageSource = ImageSource.FromResource("Assets.back_image.back_body.png");
-                this.BackgroundImageSource = ImageSource.FromResource("back_image.back_body.png");
+                this.BackgroundImageSource = ImageSource.FromFile("back_body.png");
             }
         }
         public void RenderBarcode()

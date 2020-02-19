@@ -4,15 +4,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BackgroundImage="back_body.png"
              mc:Ignorable="d"
              x:Class="TestCongres.Accueil">
     <ContentPage.Content>
         <StackLayout Padding="0,0,0,0" HorizontalOptions="Center">
             <RelativeLayout x:Name="StackImage" IsVisible="True" >
-                <Image Source="back_header_Menu.png"
-                    MinimumHeightRequest="300"
-                       RelativeLayout.WidthConstraint=
-                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+                <Image  Source="back_body.png"
+                        Aspect="Fill"
+                        RelativeLayout.WidthConstraint=
+                            "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                        RelativeLayout.HeightConstraint=
+                            "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+                <Image  Source="back_header_Menu.png"
+                        MinimumHeightRequest="300"
+                        Aspect="Fill"
+                        RelativeLayout.WidthConstraint=
+                            "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
                 <Grid Padding="50,170">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
