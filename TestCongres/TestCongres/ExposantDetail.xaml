@@ -9,7 +9,11 @@
     <StackLayout Padding="0,20">
         <RelativeLayout>
             <Image x:Name="back_header"
-                   Source="back_popup_Card.png"/>
+                   Source="back_popup_Card.png"
+                   Aspect="Fill"
+                   MinimumHeightRequest="300"
+                   RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
             <ImageButton HorizontalOptions="End"
                     Source="stop.png"
                     Pressed="btnBack"

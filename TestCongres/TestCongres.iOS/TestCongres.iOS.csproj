@@ -521,4 +521,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\background_generic_land.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\launchv2.png" />
+  </ItemGroup>
 </Project>

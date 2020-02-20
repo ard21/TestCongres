@@ -9,6 +9,7 @@
         <RelativeLayout BackgroundColor="#F0F0F0">
             <Image x:Name="back_header"
                    Source="back_header_Menu.png"
+                   Aspect="Fill"
                    MinimumHeightRequest="300"
                    RelativeLayout.WidthConstraint=
                         "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>

@@ -17,9 +17,9 @@ namespace TestCongres
         public Conferenciers ()
         {
             InitializeComponent();
-            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
-            stackSwap.WidthRequest = mainDisplayInfo.Width - 400;
-            SizeChanged += OnSizeChanged;
+            //var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+            //stackSwap.WidthRequest = mainDisplayInfo.Width - 400;
+            //SizeChanged += OnSizeChanged;
         }
 
         async private void btnBack(object sender, EventArgs e)

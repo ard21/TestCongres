@@ -4,10 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundImageSource="background_generic.png"
              x:Class="TestCongres.MyProfile">
     <ContentPage.Content>
         <RelativeLayout>
+            <Image  x:Name="back_header"
+                    Aspect="Fill"
+                    Source="background_generic.png"/>
             <ImageButton HorizontalOptions="End"
                     Source="stop.png"
                     Pressed="btnBack"
