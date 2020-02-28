@@ -45,27 +45,35 @@
                                                                       Constant=-90}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                       Constant=25}"/>
+            <Grid Padding="0,10" 
+                  HorizontalOptions="Center"
+                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                    Property=Width, 
+                                                                    Factor=0.5,
+                                                                    Constant=-100}"
+                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
+                                                                    Property=Height, 
+                                                                    Factor=0.25}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.ColumnSpan="2" Source="mtm.png"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Représentant"/>
+                <Label Grid.Row="1" Grid.Column="1" x:Name="representant" Text="M. Christian Gardner"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Courriel"/>
+                <Label Grid.Row="2" Grid.Column="1" x:Name="courriel" Text="cgardner@mtm.ca.com"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Téléphone"/>
+                <Label Grid.Row="3" Grid.Column="1" x:Name="telephone" Text="1-800-361-0877"/>
+                <Button Grid.Row="5" Grid.ColumnSpan="2" Text="Kiosque #25" Clicked="btnMaps" HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" />
+            </Grid>
         </RelativeLayout>
-        <Grid Padding="0,10" HorizontalOptions="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="100"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            <Image Grid.Row="0" Grid.ColumnSpan="2" Source="mtm.png"/>
-            <Label Grid.Row="1" Grid.Column="0" Text="Représentant"/>
-            <Label Grid.Row="1" Grid.Column="1" x:Name="representant" Text="M. Christian Gardner"/>
-            <Label Grid.Row="2" Grid.Column="0" Text="Courriel"/>
-            <Label Grid.Row="2" Grid.Column="1" x:Name="courriel" Text="cgardner@mtm.ca.com"/>
-            <Label Grid.Row="3" Grid.Column="0" Text="Téléphone"/>
-            <Label Grid.Row="3" Grid.Column="1" x:Name="telephone" Text="1-800-361-0877"/>
-            <Button Grid.Row="5" Grid.ColumnSpan="2" Text="Kiosque #25" Clicked="btnMaps" HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" />
-        </Grid>
     </StackLayout>
   
 </ContentPage>

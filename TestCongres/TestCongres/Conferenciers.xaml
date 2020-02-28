@@ -47,9 +47,9 @@
                    FontAttributes="Bold"
                    FontFamily="Butler_Bold.otf"
                    TextColor="White"/>
-            <Grid RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
+            <Grid x:Name="gridHaut" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=conferencierTexte, 
-                                                                      Property=Y,Factor=1,Constant=50}">
+                                                                      Property=Y,Factor=0,Constant=50}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -95,9 +95,14 @@
                         HorizontalOptions="Start"
                         Scrolled="swap_HautBas"
                         VerticalScrollBarVisibility="Default"
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
-                                                                      ElementName=conferencierTexte, 
-                                                                      Property=Y,Factor=1,Constant=200}">
+                        RelativeLayout.XConstraint="{ConstraintExpression   Type=RelativeToParent, 
+                                                                            Property=Width, 
+                                                                            Factor=0.01}"
+                        RelativeLayout.YConstraint="{ConstraintExpression   Type=RelativeToView, 
+                                                                            ElementName=gridHaut, 
+                                                                            Property=Height,
+                                                                            Factor=1,
+                                                                            Constant=150}">
                 <WebView x:Name="wvTexte" 
                          HeightRequest="10000" Source="https://secure.innovision.qc.ca/demo/Images/Conferencier.html"/>
             </ScrollView>
