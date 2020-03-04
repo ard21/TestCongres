@@ -24,7 +24,7 @@
                                                                               Property=Width, 
                                                                               Constant=-45}"
                             RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                              Constant=15}"/>
+                                                                              Constant=35}"/>
 
             <Label Text="Fichiers" 
                                VerticalOptions="End"
@@ -37,7 +37,7 @@
                                                                                  Factor=0.5,
                                                                                  Constant=-50}"
                                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                                 Constant=20}"/>
+                                                                                 Constant=35}"/>
             <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
                             Type=RelativeToView,
                             ElementName=back_header,

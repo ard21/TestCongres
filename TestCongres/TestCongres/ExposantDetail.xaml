@@ -6,14 +6,16 @@
              mc:Ignorable="d"
              x:Class="TestCongres.ExposantDetail"
              Title="Detail">
-    <StackLayout Padding="0,20">
+    <StackLayout>
         <RelativeLayout>
             <Image x:Name="back_header"
                    Source="back_popup_Card.png"
                    Aspect="Fill"
                    MinimumHeightRequest="300"
                    RelativeLayout.WidthConstraint=
-                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=0}"/>
             <ImageButton HorizontalOptions="End"
                     Source="stop.png"
                     Pressed="btnBack"
@@ -24,15 +26,17 @@
                                                                       Property=Width, 
                                                                       Constant=-45}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=15}"/>
+                                                                      Constant=35}"/>
             <ImageButton HorizontalOptions="End"
                     Source="btn_favoriteON.png"
+                    HeightRequest="40"
+                    WidthRequest="40"        
                     Pressed="btnFavoris"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=icon_Home, 
                                                                       Property=X,Factor=1,Constant=0}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
-                                                                      ElementName=icon_Home, 
+                                                                      ElementName=gridDetail, 
                                                                       Property=Y,Factor=1,Constant=40}"/>
             <Label Text="MTM - Médical Tronik"
                    x:Name="societe" 
@@ -42,18 +46,19 @@
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
                                                                       Factor=0.5,
-                                                                      Constant=-90}"
+                                                                      Constant=-95}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=25}"/>
-            <Grid Padding="0,10" 
+                                                                      Constant=35}"/>
+            <Grid Padding="0,10"
+                  x:Name="gridDetail"
                   HorizontalOptions="Center"
                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                     Property=Width, 
                                                                     Factor=0.5,
-                                                                    Constant=-100}"
+                                                                    Constant=-150}"
                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                     Property=Height, 
-                                                                    Factor=0.25}">
+                                                                    Factor=0.30}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>

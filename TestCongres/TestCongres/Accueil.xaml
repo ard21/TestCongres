@@ -68,7 +68,7 @@
                                     Source="btn_Exposants.png" 
                                     Pressed="btnExposantClicked"/>
                 </Grid>
-                <StackLayout Padding="0,20,0,0">
+                <StackLayout Padding="0,35,0,0">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50" />

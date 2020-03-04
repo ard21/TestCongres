@@ -16,7 +16,7 @@ namespace TestCongres
         public MyProfile()
         {
             InitializeComponent();
-            SizeChanged += OnSizeChanged;
+            //SizeChanged += OnSizeChanged;
         }
 
         async private void btnBack(object sender, EventArgs e)
@@ -27,20 +27,20 @@ namespace TestCongres
         private void swap_GaucheDroite(object sender, ScrolledEventArgs e)
         {
         }
-        void OnSizeChanged(object sender, EventArgs e)
-        {
-            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
-            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+        //void OnSizeChanged(object sender, EventArgs e)
+        //{
+            //var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+            //var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
-            if (orientation == DisplayOrientation.Landscape)
-            {
-                this.BackgroundImageSource = "background_generic_land.png";
-            }
-            else
-            {
-                this.BackgroundImageSource = "background_generic.png";
-            }
-        }
+            //if (orientation == DisplayOrientation.Landscape)
+            //{
+            //    this.BackgroundImageSource = "background_generic_land.png";
+            //}
+            //else
+            //{
+            //    this.BackgroundImageSource = "background_generic.png";
+            //}
+        //}
 
     }
 }

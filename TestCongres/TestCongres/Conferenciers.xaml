@@ -5,14 +5,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TestCongres.Conferenciers">
-    <StackLayout Padding="0,20">
+    <StackLayout>
         <RelativeLayout>
             <Image x:Name="back_header"
                    Source="back_popup_Card.png"
                    Aspect="Fill"
                    MinimumHeightRequest="300"
                    RelativeLayout.WidthConstraint=
-                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                      Constant=0}"/>
             <ImageButton HorizontalOptions="End"
                     Source="stop.png"
                     Pressed="btnBack"
@@ -23,22 +25,24 @@
                                                                       Property=Width, 
                                                                       Constant=-45}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=15}"/>
+                                                                      Constant=35}"/>
             <ImageButton HorizontalOptions="End"
                     Source="btn_favoriteON.png"
+                    HeightRequest="40"
+                    WidthRequest="40"        
                     Pressed="btnFavoris"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=icon_Home, 
                                                                       Property=X,Factor=1,Constant=0}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=icon_Home, 
-                                                                      Property=Y,Factor=1,Constant=40}"/>
+                                                                      Property=Y,Factor=1,Constant=100}"/>
             <Label RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
                                                                       Factor=0,
                                                                       Constant=0}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=25}"
+                                                                      Constant=35}"
                    Text="M. Alain Robillard"
                    x:Name="conferencierTexte" 
                    Padding="5,0,50,0"
@@ -49,7 +53,7 @@
                    TextColor="White"/>
             <Grid x:Name="gridHaut" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
                                                                       ElementName=conferencierTexte, 
-                                                                      Property=Y,Factor=0,Constant=50}">
+                                                                      Property=Y,Factor=0,Constant=60}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />

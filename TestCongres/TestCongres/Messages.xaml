@@ -25,7 +25,7 @@
                                                                      Factor=0.5,
                                                                      Constant=-60}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                     Constant=20}"/>
+                                                                     Constant=35}"/>
             <StackLayout    x:Name="stackListView"
                             RelativeLayout.YConstraint="{ConstraintExpression 
                                 Type=RelativeToView,

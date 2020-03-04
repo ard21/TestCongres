@@ -6,14 +6,16 @@
              mc:Ignorable="d"
              x:Class="TestCongres.MessagesDetail">
     <ContentPage.Content>
-        <StackLayout Padding="0,20">
+        <StackLayout>
             <RelativeLayout>
                 <Image x:Name="back_header"
                    Source="back_popup_Card.png"
                    Aspect="Fill"
                    MinimumHeightRequest="300"
                    RelativeLayout.WidthConstraint=
-                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+                                                                     Constant=0}"/>
                 <ImageButton HorizontalOptions="End"
                     Source="stop.png"
                     Pressed="btnBack"
@@ -24,7 +26,7 @@
                                                                       Property=Width, 
                                                                       Constant=-45}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=15}"/>
+                                                                      Constant=35}"/>
                 <Label Text="Message de quelqu'un"
                    x:Name="societe" 
                    FontSize="Large"
@@ -35,7 +37,7 @@
                                                                       Factor=0.5,
                                                                       Constant=-90}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=25}"/>
+                                                                      Constant=35}"/>
                 <Label Padding="0,10,20,0" 
                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 

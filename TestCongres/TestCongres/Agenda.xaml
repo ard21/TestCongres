@@ -42,7 +42,7 @@
                                                                       Property=Width, 
                                                                       Constant=-45}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=15}"/>
+                                                                      Constant=35}"/>
             <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
                             Type=RelativeToView,
                             ElementName=back_header,
@@ -95,6 +95,8 @@
                                                          Grid.Column="0"
                                                          HorizontalOptions="End"
                                                          Source="icon_FavOFF.png" 
+                                                         HeightRequest="40"
+                                                         WidthRequest="40"        
                                                          Pressed="btnFavoris"/>
                                             <StackLayout Grid.Row="1"
                                                          Grid.Column="0"
@@ -169,6 +171,8 @@
                                                HorizontalOptions="End"
                                                Grid.Row="0"
                                                Grid.Column="2"
+                                               HeightRequest="40"
+                                               WidthRequest="40"        
                                                Source="icon_FavOFF.png" 
                                                Pressed="btnFavoris"/>
                                     </Grid>

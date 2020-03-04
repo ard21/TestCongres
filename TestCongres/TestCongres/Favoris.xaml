@@ -23,7 +23,7 @@
                                                                  Factor=0.50, 
                                                                  Constant=-40}"
                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                 Constant=20}"/>
+                                                                 Constant=35}"/>
         <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
                      Type=RelativeToView,
                      ElementName=back_header,

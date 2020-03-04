@@ -9,6 +9,10 @@
         <RelativeLayout>
             <Image  x:Name="back_header"
                     Aspect="Fill"
+                    RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                    RelativeLayout.HeightConstraint=
+                        "{ConstraintExpression Type=RelativeToParent, Property=Height}"
                     Source="background_generic.png"/>
             <ImageButton HorizontalOptions="End"
                     Source="stop.png"
@@ -19,7 +23,7 @@
                                                                       Property=Width, 
                                                                       Constant=-45}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=15}"/>
+                                                                      Constant=35}"/>
             <Label Text="Bonjour,"
                    FontSize="Default"
                    TextColor="Gray" 

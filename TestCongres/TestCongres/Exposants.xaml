@@ -22,7 +22,7 @@
                                                                       Property=Width, 
                                                                       Constant=-45}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                      Constant=15}"/>
+                                                                      Constant=35}"/>
             <Label Text="Exposants" 
                                VerticalOptions="End"
                                Grid.Row="1"
@@ -36,7 +36,7 @@
                                                                                  Factor=0.5,
                                                                                  Constant=-55}"
                                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
-                                                                                 Constant=20}"/>
+                                                                                 Constant=35}"/>
             <StackLayout RelativeLayout.YConstraint="{ConstraintExpression 
                             Type=RelativeToView,
                             ElementName=back_header,
@@ -89,6 +89,8 @@
                                         <ImageButton 
                                                VerticalOptions="Start"
                                                HorizontalOptions="End"
+                                               HeightRequest="40"
+                                               WidthRequest="40"        
                                                Grid.Row="0"
                                                Grid.Column="2"
                                                Source="icon_FavOFF.png" 
