@@ -27,6 +27,7 @@
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                       Constant=35}"/>
             <ImageButton HorizontalOptions="End"
+                    x:Name="Favori"
                     Source="btn_favoriteON.png"
                     HeightRequest="40"
                     WidthRequest="40"        
@@ -64,37 +65,32 @@
                     <ColumnDefinition Width="0.10*" />
                     <ColumnDefinition Width="0.20*"/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Row="0"
-                    Grid.Column="0"
-                    Source="icon_lieu.png"/>
-                <Label Grid.Row="0"
-                    Grid.Column="1"
-                    TextColor="White"
-                     FontSize="Small"
-                     Text="Local 510"/>
-                <Image Grid.Row="0"
-                    Grid.Column="2"
-                       Source="icon_heure.png"/>
-                <Label Grid.Row="0"
-                    Grid.Column="3"
-                       TextColor="White"
-                     FontSize="Small"
-                     Text="9 h 30"/>
+                <Image  Grid.Row="0"
+                        Grid.Column="0"
+                        Source="icon_lieu.png"/>
+                <Label  Grid.Row="0"
+                        Grid.Column="1"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="Local 510"/>
+                <Image  Grid.Row="0"
+                        Grid.Column="2"
+                        Source="icon_heure.png"/>
+                <Label  Grid.Row="0"
+                        Grid.Column="3"
+                        TextColor="White"
+                        FontSize="Small"
+                        Text="9 h 30"/>
              </Grid>
-            <ScrollView Orientation="Vertical" 
-                        x:Name="stackSwap"
-                        Padding="20,0,20,0"
-                        HeightRequest="15000"
-                        HorizontalOptions="Start"
-                        Scrolled="swap_HautBas"
-                        VerticalScrollBarVisibility="Default"
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            <ScrollView Orientation="Vertical"
+                        Padding="10,0,10,0"
+                        RelativeLayout.YConstraint="{ConstraintExpression   Type=RelativeToView,  
+                                                                            ElementName=Favori, 
+                                                                            Property=Y,
+                                                                            Factor=1,
+                                                                            Constant=75}">
 
-                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
-                                                                      ElementName=cours, 
-                                                                      Property=Y,Factor=1,Constant=200}">
-                <WebView x:Name="wvTexte" 
-                         HeightRequest="10000" Source="https://secure.innovision.qc.ca/demo/Images/atelierHTML.html"/>
+                <Image Source="atelier_detail.png"/>
             </ScrollView>
         </RelativeLayout>
     </StackLayout>

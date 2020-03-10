@@ -17,7 +17,6 @@ namespace TestCongres
         public Conferenciers ()
         {
             InitializeComponent();
-            SizeChanged += OnSizeChanged;
         }
 
         async private void btnBack(object sender, EventArgs e)
@@ -37,24 +36,5 @@ namespace TestCongres
         {
             await Navigation.PushModalAsync(new Atelier(), false);
         }
-        void OnSizeChanged(object sender, EventArgs e)
-        {
-            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
-            stackSwap.WidthRequest = mainDisplayInfo.Width - 1000;
-            wvTexte.WidthRequest = mainDisplayInfo.Width - 1000;
-
-            //    var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
-            //    var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
-
-            //    if (orientation == DisplayOrientation.Landscape)
-            //    {
-            //        back_header.Source = ImageSource.FromFile("back_popup_Card_land.png");
-            //    }
-            //    else
-            //    {
-            //        back_header.Source = ImageSource.FromFile("back_popup_Card.png");
-            //    }
-        }
-
     }
 }

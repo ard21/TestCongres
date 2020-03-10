@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TestCongres.Conferenciers">
+    <ScrollView VerticalScrollBarVisibility="Always" HorizontalScrollBarVisibility="Default">
     <StackLayout>
         <RelativeLayout>
             <Image x:Name="back_header"
@@ -27,16 +28,17 @@
                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
                                                                       Constant=35}"/>
             <ImageButton HorizontalOptions="End"
-                    Source="btn_favoriteON.png"
-                    HeightRequest="40"
-                    WidthRequest="40"        
-                    Pressed="btnFavoris"
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, 
-                                                                      ElementName=icon_Home, 
-                                                                      Property=X,Factor=1,Constant=0}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
-                                                                      ElementName=icon_Home, 
-                                                                      Property=Y,Factor=1,Constant=100}"/>
+                         x:Name="Favori"
+                        Source="btn_favoriteON.png"
+                        HeightRequest="40"
+                        WidthRequest="40"        
+                        Pressed="btnFavoris"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, 
+                                                                          ElementName=icon_Home, 
+                                                                          Property=X,Factor=1,Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
+                                                                          ElementName=icon_Home, 
+                                                                          Property=Y,Factor=1,Constant=100}"/>
             <Label RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, 
                                                                       Property=Width, 
                                                                       Factor=0,
@@ -92,24 +94,22 @@
                         Margin="1,0,1,0"
                         FontSize="Small"/>
             </Grid>
-            <ScrollView Orientation="Vertical" 
-                        x:Name="stackSwap"
-                        Padding="20,0,20,0"
-                        HeightRequest="15000"
-                        HorizontalOptions="Start"
-                        Scrolled="swap_HautBas"
-                        VerticalScrollBarVisibility="Default"
-                        RelativeLayout.XConstraint="{ConstraintExpression   Type=RelativeToParent, 
-                                                                            Property=Width, 
-                                                                            Factor=0.01}"
-                        RelativeLayout.YConstraint="{ConstraintExpression   Type=RelativeToView, 
-                                                                            ElementName=gridHaut, 
-                                                                            Property=Height,
+                <Image Source="conferencier_detail.png"
+                       RelativeLayout.YConstraint="{ConstraintExpression   Type=RelativeToView,  
+                                                                            ElementName=Favori, 
+                                                                            Property=Y,
                                                                             Factor=1,
-                                                                            Constant=150}">
-                <WebView x:Name="wvTexte" 
-                         HeightRequest="10000" Source="https://secure.innovision.qc.ca/demo/Images/Conferencier.html"/>
-            </ScrollView>
+                                                                            Constant=75}"/>
+                <!--<ScrollView Orientation="Vertical"
+                        Padding="10,0,10,0"
+                        RelativeLayout.YConstraint="{ConstraintExpression   Type=RelativeToView,  
+                                                                            ElementName=Favori, 
+                                                                            Property=Y,
+                                                                            Factor=1,
+                                                                            Constant=75}">
+            </ScrollView>-->
         </RelativeLayout>
     </StackLayout>
+    </ScrollView>
+    
 </ContentPage>
