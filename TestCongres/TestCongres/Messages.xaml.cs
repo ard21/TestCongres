@@ -15,7 +15,7 @@ namespace TestCongres
         public Messages()
         {
             InitializeComponent();
-            SizeChanged += OnSizeChanged;
+            //SizeChanged += OnSizeChanged;
 
             MessagesGlobaux = new List<MessageGlobal>();
             MessagesGlobaux.Add(new MessageGlobal
@@ -36,24 +36,24 @@ namespace TestCongres
 
             BindingContext = this;
         }
-        void OnSizeChanged(object sender, EventArgs e)
-        {
-            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
-            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+        //void OnSizeChanged(object sender, EventArgs e)
+        //{
+        //    var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+        //    var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
-            if (orientation == DisplayOrientation.Landscape)
-            {
-                back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
-                //rltLayout.WidthRequest = mainDisplayInfo.Width;
-                //stackListView.WidthRequest = mainDisplayInfo.Width-200;
-            }
-            else
-            {
-                back_header.Source = ImageSource.FromFile("back_header_Menu.png");
-                //rltLayout.WidthRequest = mainDisplayInfo.Width;
-                //stackListView.WidthRequest = mainDisplayInfo.Width-200;
-            }
-        }
+        //    if (orientation == DisplayOrientation.Landscape)
+        //    {
+        //        back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
+        //        //rltLayout.WidthRequest = mainDisplayInfo.Width;
+        //        //stackListView.WidthRequest = mainDisplayInfo.Width-200;
+        //    }
+        //    else
+        //    {
+        //        back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+        //        //rltLayout.WidthRequest = mainDisplayInfo.Width;
+        //        //stackListView.WidthRequest = mainDisplayInfo.Width-200;
+        //    }
+        //}
 
         async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {

@@ -15,7 +15,7 @@ namespace TestCongres
 		public Favoris()
         {
             InitializeComponent();
-			SizeChanged += OnSizeChanged;
+			//SizeChanged += OnSizeChanged;
 
 			favori.Add(new GroupedFavorisModel("Conférenciers", new List<FavorisModel>
 				{
@@ -98,20 +98,20 @@ namespace TestCongres
 					break;
 			}
 		}
-		void OnSizeChanged(object sender, EventArgs e)
-		{
-			var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
-			var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+		//void OnSizeChanged(object sender, EventArgs e)
+		//{
+		//	var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+		//	var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
-			if (orientation == DisplayOrientation.Landscape)
-			{
-				back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
-			}
-			else
-			{
-				back_header.Source = ImageSource.FromFile("back_header_Menu.png");
-			}
-		}
+		//	if (orientation == DisplayOrientation.Landscape)
+		//	{
+		//		back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
+		//	}
+		//	else
+		//	{
+		//		back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+		//	}
+		//}
 
 	}
 }

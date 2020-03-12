@@ -13,7 +13,7 @@ namespace TestCongres
         public Download()
         {
             InitializeComponent();
-            SizeChanged += OnSizeChanged;
+            //SizeChanged += OnSizeChanged;
 
             Fichiers = new List<Fichier>();
             Fichiers.Add(new Fichier
@@ -79,20 +79,20 @@ namespace TestCongres
             stackListView.IsVisible = true;
             boutonBack.IsVisible = false;
         }
-        void OnSizeChanged(object sender, EventArgs e)
-        {
-            var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
-            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+        //void OnSizeChanged(object sender, EventArgs e)
+        //{
+        //    var orientation = DeviceDisplay.MainDisplayInfo.Orientation;
+        //    var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
-            if (orientation == DisplayOrientation.Landscape)
-            {
-                back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
-            }
-            else
-            {
-                back_header.Source = ImageSource.FromFile("back_header_Menu.png");
-            }
-        }
+        //    if (orientation == DisplayOrientation.Landscape)
+        //    {
+        //        back_header.Source = ImageSource.FromFile("back_header_Menu_land.png");
+        //    }
+        //    else
+        //    {
+        //        back_header.Source = ImageSource.FromFile("back_header_Menu.png");
+        //    }
+        //}
 
         private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
